@@ -156,8 +156,7 @@ const Home = () => (
       }
 
       .downloadButton {
-        width: 400px;
-        height: 75px;
+        background: red !important;
       }
 
       .homePageTitle {
@@ -218,6 +217,10 @@ const Home = () => (
       }
 
       .features > img {
+        width: 90%;
+      }
+
+      .modpacksBrowser {
         width: 90%;
       }
 
@@ -301,11 +304,19 @@ const Home = () => (
       }
 
       h2 {
-        margin-top: 10px;
+        margin-top: 20px;
         color: white;
       }
 
       @media only screen and (max-width: 1000px) {
+        .container {
+          height: 500vh;
+        }
+
+        .downloadButton {
+          display: none !important;
+        }
+
         .homePageTitleContainer {
           display: flex;
           flex-direction: column;
@@ -332,14 +343,41 @@ const Home = () => (
           z-index: 1;
         }
 
+        .reasons {
+          flex-direction: column;
+          width: auto;
+          height: 1200px;
+        }
+
+        .reasons > .column {
+          margin-top: 80px;
+          height: 300px;
+        }
+
         .homePageTitle > h1,
         .homePageTitle > p {
           text-align: center;
         }
 
+        .features {
+          margin-top: 900px;
+        }
+
         .features > h1 {
           font-weight: bold;
           font-size: 55px;
+        }
+      }
+      @media only screen and (max-width: 420px) {
+        .homePageTitle {
+          max-width: 350px;
+        }
+
+        .homePageTitle > h1 {
+          font-size: 60px;
+        }
+        .homePageTitle > p {
+          max-width: 350px;
         }
       }
     `}</style>
