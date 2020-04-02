@@ -15,7 +15,6 @@ const Home = () => (
   <div className="container">
     <div className="navBar">
       <img alt="logo" src="gdLogo.png" className="logo" />
-      <Button>Home</Button>
       <div className="buttons">
         <Link href="/">
           <div className="button" id="home">
@@ -38,7 +37,9 @@ const Home = () => (
         <div className="homePageTitle">
           <h1>GDLauncher</h1>
           <p>The future of minecraft launchers</p>
-          <button>Download</button>
+          <Button type="primary" className="downloadButton">
+            Download it Now!
+          </Button>
         </div>
       </div>
     </div>
@@ -163,6 +164,11 @@ const Home = () => (
         top: 200px;
       }
 
+      .homePageTitle > .downloadButton {
+        width: 400px;
+        height: 75px;
+      }
+
       .homePageTitle {
         width: 450px;
         max-height: 320px;
@@ -175,7 +181,7 @@ const Home = () => (
       }
 
       .homePageTitle > h1 {
-        margin: 0;
+        margin-bottom: 10px 0;
         width: 100%;
         color: white;
         font-family: Roboto;
@@ -265,6 +271,7 @@ const Home = () => (
 
       .button {
         margin: 10px;
+        cursor: pointer;
       }
 
       .buttons {
