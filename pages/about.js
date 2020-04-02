@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 
-const Download = () => (
+const About = () => (
   <div className="container">
     <div className="navBar">
       <img alt="logo" src="gdLogo.png" className="logo" />
@@ -191,7 +191,8 @@ const Download = () => (
         line-height: 28px;
       }
     `}</style>
+
   </div>
 );
 
-export default Download;
+export default About;

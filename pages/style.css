@@ -1,0 +1,29 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: FF Mark W05, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+@font-face {
+  font-family: "FF Mark W05";
+  src: url(https://lolstatic-a.akamaihd.net/rso-login-page/2.2.20/assets/FFMarkW05-Medium.662fbc7901e31d6bee9c91d5f2cf42a1.woff2)
+    format("woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "FF Mark W05";
+  src: url(https://lolstatic-a.akamaihd.net/rso-login-page/2.2.20/assets/FFMarkW05-Bold.8e5368c00aa72d1e1b19d7b437c375f4.woff2)
+    format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "FF Mark W05";
+  src: url(https://lolstatic-a.akamaihd.net/rso-login-page/2.2.20/assets/FFMarkW05-Heavy.1de8fa6eb6e45628ebb3edd635462180.woff2)
+    format("woff2");
+  font-style: normal;
+  font-weight: 800;
+}

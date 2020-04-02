@@ -45,7 +45,7 @@ const Home = () => (
     <img alt="isometric" src="isometricLauncher.png" className="isometric" />
     <div className="features">
       <h1>Why to use GDLauncher ?</h1>
-      <img alt="launcher1" src="launcher-1.png" className="launcher1" />
+      <img alt="launcher1" src="launcher-1.png" />
     </div>
     <div className="reasons">
       <div className="column">
@@ -97,11 +97,13 @@ const Home = () => (
         </div>
       </div>
     </div>
-    <img
-      alt="modpacksBrowser"
-      src="modpacksBrowser.png"
-      className="modpacksBrowser"
-    />
+    <div className="screenshots">
+      <img
+        alt="modpacksBrowser"
+        src="modpacksBrowser.png"
+        className="modpacksBrowser"
+      />
+    </div>
 
     <style jsx>{`
       .container {
@@ -174,7 +176,6 @@ const Home = () => (
         margin-bottom: 10px 0;
         width: 100%;
         color: white;
-        font-family: Roboto;
         font-style: normal;
         font-weight: 900;
         font-size: 72px;
@@ -188,8 +189,6 @@ const Home = () => (
 
       .homePageTitle > p {
         color: white;
-
-        font-family: Roboto;
         font-style: normal;
         font-weight: normal;
         font-size: 40px;
@@ -208,7 +207,6 @@ const Home = () => (
         color: white;
         text-align: center;
         margin-bottom: 80px;
-        font-family: Roboto;
         font-style: normal;
         font-weight: bold;
         font-size: 64px;
@@ -221,7 +219,14 @@ const Home = () => (
       }
 
       .modpacksBrowser {
-        width: 90%;
+        max-width: 90%;
+      }
+
+      .screenshots {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
 
       @keyframes MoveUpDown {
@@ -246,7 +251,6 @@ const Home = () => (
       }
 
       #download {
-        font-family: Roboto;
         font-style: normal;
         font-weight: 900;
         font-size: 20px;
@@ -274,7 +278,6 @@ const Home = () => (
       }
 
       .buttons > div {
-        font-family: Roboto;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
@@ -345,13 +348,14 @@ const Home = () => (
 
         .reasons {
           flex-direction: column;
+          justify-content: space-enevly;
           width: auto;
           height: 1200px;
         }
 
         .reasons > .column {
-          margin-top: 80px;
-          height: 300px;
+          margin-top: 0px;
+          height: 340px;
         }
 
         .homePageTitle > h1,
@@ -376,23 +380,10 @@ const Home = () => (
         .homePageTitle > h1 {
           font-size: 60px;
         }
+
         .homePageTitle > p {
           max-width: 350px;
         }
-      }
-    `}</style>
-
-    <style jsx global>{`
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-      }
-
-      * {
-        box-sizing: border-box;
       }
     `}</style>
   </div>
