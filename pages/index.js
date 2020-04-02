@@ -2,7 +2,14 @@ import Link from "next/link";
 import theme from "./theme";
 import { Button } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faUsers,
+  faTrophy,
+  faCode,
+  faBolt,
+  faThLarge,
+  faThumbsUp
+} from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => (
   <div className="container">
@@ -34,10 +41,40 @@ const Home = () => (
           <button>Download</button>
         </div>
       </div>
-      <img alt="isometric" src="isometricLauncher.png" className="isometric" />
-      <div className="features">
-        <h1>Why to use GDLauncher ?</h1>
-        <img alt="launcher1" src="launcher-1.png" />
+    </div>
+    <img alt="isometric" src="isometricLauncher.png" className="isometric" />
+    <div className="features">
+      <h1>Why to use GDLauncher ?</h1>
+      <img alt="launcher1" src="launcher-1.png" className="launcher1" />
+    </div>
+    <div className="reasons">
+      <div id="row">
+        <div>
+          <FontAwesomeIcon icon={faUsers} size="4x" />
+          <h2>we listen</h2>
+        </div>
+        <div>
+          <FontAwesomeIcon icon={faTrophy} size="4x" />
+          <h2>modern ui</h2>
+        </div>
+        <div>
+          <FontAwesomeIcon icon={faThLarge} size="4x" />
+          <h2>customizable</h2>
+        </div>
+      </div>
+      <div id="row">
+        <div>
+          <FontAwesomeIcon icon={faBolt} size="4x" />
+          <h2>fast</h2>
+        </div>
+        <div>
+          <FontAwesomeIcon icon={faCode} size="4x" />
+          <h2>open source</h2>
+        </div>
+        <div>
+          <FontAwesomeIcon icon={faThumbsUp} size="4x" />
+          <h2>easy to use</h2>
+        </div>
       </div>
     </div>
 
@@ -49,6 +86,7 @@ const Home = () => (
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        justify-content: space-evenly;
         background: #2f5266;
       }
 
@@ -78,6 +116,7 @@ const Home = () => (
           #212b36 50.77%,
           rgba(33, 43, 54, 0) 100%
         );
+        z-index: 1;
       }
 
       .homePageTitleContainer {
@@ -114,6 +153,11 @@ const Home = () => (
         line-height: 84px;
       }
 
+      .logoBig {
+        width: 30%;
+        z-index: 1;
+      }
+
       .homePageTitle > p {
         color: white;
 
@@ -124,8 +168,15 @@ const Home = () => (
         line-height: 56px;
       }
 
+      .features {
+        margin-top: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
       .features > h1 {
-        margin-top: 1000px;
         color: white;
         text-align: center;
         margin-bottom: 80px;
@@ -137,9 +188,12 @@ const Home = () => (
         text-align: center;
       }
 
-      .logoBig {
-        width: 30%;
-        z-index: 1;
+      .features > img {
+        width: 90%;
+      }
+
+      FontAwesomeIcon {
+        color: white;
       }
 
       @keyframes MoveUpDown {
@@ -159,7 +213,7 @@ const Home = () => (
         position: absolute;
         max-width: 95%;
         height: auto;
-        top: 80px;
+        top: 180px;
         z-index: 0;
       }
 
@@ -196,6 +250,63 @@ const Home = () => (
         font-weight: normal;
         font-size: 16px;
         line-height: 28px;
+      }
+
+      reasons {
+        margin: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 90% !important;
+      }
+
+      #row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      #row > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @media only screen and (max-width: 1000px) {
+        .homePageTitleContainer {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+          z-index: 2;
+          position: absolute;
+          top: 200px;
+        }
+
+        .homePageTitle {
+          width: 589px;
+          max-height: 320px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          -webkit-justify-content: center;
+          align-items: center;
+          color: white;
+        }
+
+        .logoBig {
+          width: 50%;
+          z-index: 1;
+        }
+
+        .homePageTitle > h1,
+        .homePageTitle > p {
+          text-align: center;
+        }
+
+        .features > h1 {
+          font-weight: bold;
+          font-size: 55px;
+        }
       }
     `}</style>
 
