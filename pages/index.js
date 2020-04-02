@@ -58,11 +58,7 @@ const Home = () => (
           <h2>we listen</h2>
         </div>
         <div>
-          <FontAwesomeIcon
-            icon={faBolt}
-            size="4x"
-            style={{ color: "white" }}
-          />
+          <FontAwesomeIcon icon={faBolt} size="4x" style={{ color: "white" }} />
           <h2>fast</h2>
         </div>
       </div>
@@ -77,11 +73,7 @@ const Home = () => (
           <h2>modern ui</h2>
         </div>
         <div>
-          <FontAwesomeIcon
-            icon={faCode}
-            size="4x"
-            style={{ color: "white" }}
-          />
+          <FontAwesomeIcon icon={faCode} size="4x" style={{ color: "white" }} />
           <h2>open source</h2>
         </div>
       </div>
@@ -227,10 +219,6 @@ const Home = () => (
 
       .features > img {
         width: 90%;
-      }
-
-      FontAwesomeIcon {
-        color: white;
       }
 
       @keyframes MoveUpDown {
