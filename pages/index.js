@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import Head from "next/head";
+import { Button } from "antd";
 
 const Home = () => (
   <div className="container">
@@ -14,6 +15,7 @@ const Home = () => (
 
       <p className="description">
         Get started by editing <code>pages/index.js</code>
+        <Button type="primary">Test</Button>
       </p>
 
       <div className="grid">
@@ -198,6 +200,6 @@ const Home = () => (
       }
     `}</style>
   </div>
-)
+);
 
-export default Home
+export default Home;
