@@ -1,5 +1,4 @@
 import Link from "next/link";
-import theme from "./theme";
 import { Button } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -54,7 +53,7 @@ const Home = () => (
           <FontAwesomeIcon
             icon={faUsers}
             size="4x"
-            style={{ color: theme.palette.text.icon }}
+            style={{ color: "white" }}
           />
           <h2>we listen</h2>
         </div>
@@ -62,7 +61,7 @@ const Home = () => (
           <FontAwesomeIcon
             icon={faBolt}
             size="4x"
-            style={{ color: theme.palette.text.icon }}
+            style={{ color: "white" }}
           />
           <h2>fast</h2>
         </div>
@@ -73,7 +72,7 @@ const Home = () => (
           <FontAwesomeIcon
             icon={faTrophy}
             size="4x"
-            style={{ color: theme.palette.text.icon }}
+            style={{ color: "white" }}
           />
           <h2>modern ui</h2>
         </div>
@@ -81,7 +80,7 @@ const Home = () => (
           <FontAwesomeIcon
             icon={faCode}
             size="4x"
-            style={{ color: theme.palette.text.icon }}
+            style={{ color: "white" }}
           />
           <h2>open source</h2>
         </div>
@@ -92,7 +91,7 @@ const Home = () => (
           <FontAwesomeIcon
             icon={faThLarge}
             size="4x"
-            style={{ color: theme.palette.text.icon }}
+            style={{ color: "white" }}
           />
           <h2>customizable</h2>
         </div>
@@ -100,7 +99,7 @@ const Home = () => (
           <FontAwesomeIcon
             icon={faThumbsUp}
             size="4x"
-            style={{ color: theme.palette.text.icon }}
+            style={{ color: "white" }}
           />
           <h2>easy to use</h2>
         </div>
@@ -164,7 +163,7 @@ const Home = () => (
         top: 200px;
       }
 
-      .homePageTitle > .downloadButton {
+      .downloadButton {
         width: 400px;
         height: 75px;
       }
