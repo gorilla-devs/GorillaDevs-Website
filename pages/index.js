@@ -15,7 +15,7 @@ const Home = () => (
   <div className="container">
     <div className="navBar">
       <img alt="logo" src="gdLogo.png" className="logo" />
-      {/* <Button>Home</Button> */}
+      <Button>Home</Button>
       <div className="buttons">
         <Link href="/">
           <div className="button" id="home">
@@ -48,35 +48,68 @@ const Home = () => (
       <img alt="launcher1" src="launcher-1.png" className="launcher1" />
     </div>
     <div className="reasons">
-      <div id="row">
+      <div className="column">
         <div>
-          <FontAwesomeIcon icon={faUsers} size="4x" />
+          <FontAwesomeIcon
+            icon={faUsers}
+            size="4x"
+            style={{ color: theme.palette.text.icon }}
+          />
           <h2>we listen</h2>
         </div>
         <div>
-          <FontAwesomeIcon icon={faTrophy} size="4x" />
+          <FontAwesomeIcon
+            icon={faBolt}
+            size="4x"
+            style={{ color: theme.palette.text.icon }}
+          />
+          <h2>fast</h2>
+        </div>
+      </div>
+
+      <div className="column">
+        <div>
+          <FontAwesomeIcon
+            icon={faTrophy}
+            size="4x"
+            style={{ color: theme.palette.text.icon }}
+          />
           <h2>modern ui</h2>
         </div>
         <div>
-          <FontAwesomeIcon icon={faThLarge} size="4x" />
-          <h2>customizable</h2>
-        </div>
-      </div>
-      <div id="row">
-        <div>
-          <FontAwesomeIcon icon={faBolt} size="4x" />
-          <h2>fast</h2>
-        </div>
-        <div>
-          <FontAwesomeIcon icon={faCode} size="4x" />
+          <FontAwesomeIcon
+            icon={faCode}
+            size="4x"
+            style={{ color: theme.palette.text.icon }}
+          />
           <h2>open source</h2>
         </div>
+      </div>
+
+      <div className="column">
         <div>
-          <FontAwesomeIcon icon={faThumbsUp} size="4x" />
+          <FontAwesomeIcon
+            icon={faThLarge}
+            size="4x"
+            style={{ color: theme.palette.text.icon }}
+          />
+          <h2>customizable</h2>
+        </div>
+        <div>
+          <FontAwesomeIcon
+            icon={faThumbsUp}
+            size="4x"
+            style={{ color: theme.palette.text.icon }}
+          />
           <h2>easy to use</h2>
         </div>
       </div>
     </div>
+    <img
+      alt="modpacksBrowser"
+      src="modpacksBrowser.png"
+      className="modpacksBrowser"
+    />
 
     <style jsx>{`
       .container {
@@ -86,7 +119,6 @@ const Home = () => (
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        justify-content: space-evenly;
         background: #2f5266;
       }
 
@@ -132,7 +164,7 @@ const Home = () => (
       }
 
       .homePageTitle {
-        width: 589px;
+        width: 450px;
         max-height: 320px;
         display: flex;
         flex-direction: column;
@@ -169,7 +201,7 @@ const Home = () => (
       }
 
       .features {
-        margin-top: 250px;
+        margin-top: 600px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -252,23 +284,31 @@ const Home = () => (
         line-height: 28px;
       }
 
-      reasons {
-        margin: 1px solid red;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 90% !important;
-      }
-
-      #row {
+      .reasons {
+        margin: 150px 0 150px 0px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        width: 900px;
+        height: 350px;
       }
-      #row > div {
+
+      .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .column > div {
         display: flex;
         flex-direction: column;
         align-items: center;
+      }
+
+      h2 {
+        margin-top: 10px;
+        color: white;
       }
 
       @media only screen and (max-width: 1000px) {
