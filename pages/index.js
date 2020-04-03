@@ -44,10 +44,14 @@ const Home = () => (
         </div>
       </div>
     </div>
-    <img alt="isometric" src="isometricLauncher.png" className="isometric" />
+    <img
+      alt="isometric"
+      src="https://cdn.assets-gdevs.com/isometricLauncher.png"
+      className="isometric"
+    />
     <div className="features">
       <h1>Why to use GDLauncher ?</h1>
-      <img alt="launcher1" src="launcher-1.png" />
+      <img alt="launcher1" src="https://cdn.assets-gdevs.com/launcher-1.jpg" />
     </div>
     <div className="reasons">
       <div className="column">

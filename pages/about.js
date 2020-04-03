@@ -1,11 +1,9 @@
-import Head from "next/head";
 import Link from "next/link";
 
 const About = () => (
   <div className="container">
     <div className="navBar">
       <img alt="logo" src="gdLogo.png" className="logo" />
-      {/* <Button>Home</Button> */}
       <div className="buttons">
         <Link href="/">
           <div className="button" id="home">
@@ -25,7 +23,7 @@ const About = () => (
     </div>
     <style jsx>{`
       .container {
-        height: 400vh;
+        height: 100vh;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -77,47 +75,6 @@ const About = () => (
           #212b36 50.77%,
           rgba(33, 43, 54, 0) 100%
         );
-      }
-
-      .homePageTitleContainer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        max-width: 1000x;
-        max-height: 450px;
-        z-index: 2;
-        position: absolute;
-        top: 200px;
-      }
-
-      .homePageTitle {
-        width: 589px;
-        max-height: 320px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        -webkit-justify-content: flex-start;
-        align-items: flex-start;
-        color: white;
-      }
-
-      .homePageTitle > h1 {
-        margin: 0;
-        width: 100%;
-        color: white;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 72px;
-        line-height: 84px;
-      }
-
-      .homePageTitle > p {
-        color: white;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 40px;
-        line-height: 56px;
       }
 
       .features > h1 {
@@ -191,7 +148,6 @@ const About = () => (
         line-height: 28px;
       }
     `}</style>
-
   </div>
 );
 

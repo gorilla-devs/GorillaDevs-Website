@@ -1,11 +1,17 @@
-import Head from "next/head";
 import Link from "next/link";
+import { Button } from "antd";
+import os from "os";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLinux,
+  faWindows,
+  faApple,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Download = () => (
   <div className="container">
     <div className="navBar">
       <img alt="logo" src="gdLogo.png" className="logo" />
-      {/* <Button>Home</Button> */}
       <div className="buttons">
         <Link href="/">
           <div className="button" id="home">
@@ -23,9 +29,25 @@ const Download = () => (
       </div>
       <div className="gradient"></div>
     </div>
+    <div className="downloadContainer">
+      <Button type="primary" className="downloadButton">
+        Download
+      </Button>
+      <div>
+        <p>Available for:</p>
+        <FontAwesomeIcon
+          icon={faWindows}
+          size="2x"
+          style={{ color: "white" }}
+        />
+        <FontAwesomeIcon icon={faApple} size="2x" style={{ color: "white" }} />
+        <FontAwesomeIcon icon={faLinux} size="2x" style={{ color: "white" }} />
+      </div>
+    </div>
+
     <style jsx>{`
       .container {
-        height: 400vh;
+        height: 100vh;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -79,85 +101,6 @@ const Download = () => (
         );
       }
 
-      .homePageTitleContainer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        max-width: 1000x;
-        max-height: 450px;
-        z-index: 2;
-        position: absolute;
-        top: 200px;
-      }
-
-      .homePageTitle {
-        width: 589px;
-        max-height: 320px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        -webkit-justify-content: flex-start;
-        align-items: flex-start;
-        color: white;
-      }
-
-      .homePageTitle > h1 {
-        margin: 0;
-        width: 100%;
-        color: white;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 72px;
-        line-height: 84px;
-      }
-
-      .homePageTitle > p {
-        color: white;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 40px;
-        line-height: 56px;
-      }
-
-      .features > h1 {
-        margin-top: 1000px;
-        color: white;
-        text-align: center;
-        margin-bottom: 80px;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 64px;
-        line-height: 75px;
-        text-align: center;
-      }
-
-      .logoBig {
-        width: 30%;
-        z-index: 1;
-      }
-
-      @keyframes MoveUpDown {
-        0% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-20px);
-        }
-        100% {
-          transform: translateY(0px);
-        }
-      }
-
-      .isometric {
-        animation: MoveUpDown 2s linear infinite;
-        position: absolute;
-        max-width: 95%;
-        height: auto;
-        top: 80px;
-        z-index: 0;
-      }
-
       #download {
         font-style: normal;
         font-weight: 900;
@@ -189,6 +132,25 @@ const Download = () => (
         font-weight: normal;
         font-size: 16px;
         line-height: 28px;
+      }
+
+      .downloadContainer {
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        color: white;
+      }
+
+      .downloadContainer > div {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .downloadContainer > p {
+        font-weight: 700;
+        width: 90px;
       }
     `}</style>
   </div>
