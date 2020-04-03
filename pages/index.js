@@ -7,7 +7,7 @@ import {
   faCode,
   faBolt,
   faThLarge,
-  faThumbsUp
+  faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => (
@@ -36,9 +36,11 @@ const Home = () => (
         <div className="homePageTitle">
           <h1>GDLauncher</h1>
           <p>The future of minecraft launchers</p>
-          <Button type="primary" className="downloadButton">
-            Download it Now!
-          </Button>
+          <Link href="/download">
+            <Button type="primary" className="downloadButton">
+              Download it Now!
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
@@ -157,10 +159,6 @@ const Home = () => (
         top: 200px;
       }
 
-      .downloadButton {
-        background: red !important;
-      }
-
       .homePageTitle {
         width: 450px;
         max-height: 320px;
@@ -265,7 +263,6 @@ const Home = () => (
 
       .button {
         margin: 10px;
-        cursor: pointer;
       }
 
       .buttons {
@@ -309,6 +306,34 @@ const Home = () => (
       h2 {
         margin-top: 20px;
         color: white;
+      }
+
+      @media only screen and (max-height: 800px) {
+        .features {
+          margin-top: 900px;
+        }
+
+        .isometric {
+          max-width: 85%;
+        }
+      }
+
+      @media only screen and (max-height: 700px) {
+        .features {
+          margin-top: 900px;
+        }
+
+        .isometric {
+          max-width: 75%;
+        }
+
+        .reasons {
+          height: 1400px;
+        }
+
+        .reasons > .column {
+          height: 300px;
+        }
       }
 
       @media only screen and (max-width: 1000px) {
