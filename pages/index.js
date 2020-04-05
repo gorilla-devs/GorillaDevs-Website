@@ -13,7 +13,11 @@ import {
 const Home = () => (
   <div className="container">
     <div className="navBar">
-    <img alt="logo" src="https://cdn.assets-gdevs.com/gdLogo.png" className="logo" />
+      <img
+        alt="logo"
+        src="https://cdn.assets-gdevs.com/gdLogo.png"
+        className="logo"
+      />
       <div className="buttons">
         <Link href="/">
           <div className="button" id="home">
@@ -32,7 +36,11 @@ const Home = () => (
     </div>
     <div className="gradient">
       <div className="homePageTitleContainer">
-      <img alt="logobig" src="https://cdn.assets-gdevs.com/gdLogo.png" className="logobig" />
+        <img
+          alt="logoBig"
+          src="https://cdn.assets-gdevs.com/gdLogo.png"
+          className="logoBig"
+        />
         <div className="homePageTitle">
           <h1>GDLauncher</h1>
           <p>The future of minecraft launchers</p>
@@ -51,6 +59,12 @@ const Home = () => (
     />
     <div className="features">
       <h1>Why to use GDLauncher ?</h1>
+      <p>
+        GDLauncher is free and open source. Only a few developers work on it,
+        and they all have a full time job and a life outside of here. They do
+        this because they love helping the community by building an incredible
+        product that can make Minecraft more enjoyable.
+      </p>
       <img alt="launcher1" src="https://cdn.assets-gdevs.com/launcher-1.jpg" />
     </div>
     <div className="reasons">
@@ -103,13 +117,13 @@ const Home = () => (
         </div>
       </div>
     </div>
-    <div className="screenshots">
-      <img
-        alt="modpacksBrowser"
-        src="modpacksBrowser.png"
-        className="modpacksBrowser"
-      />
-    </div>
+    {/* <div className="screenshots"> */}
+    <img
+      alt="modpacksBrowser"
+      src="modpacksBrowser.png"
+      className="modpacksBrowser"
+    />
+    {/* </div> */}
 
     <style jsx>{`
       .container {
@@ -150,7 +164,6 @@ const Home = () => (
         );
         z-index: 1;
       }
-      
 
       .homePageTitleContainer {
         display: flex;
@@ -162,6 +175,7 @@ const Home = () => (
         z-index: 2;
         position: absolute;
         top: 200px;
+        animation: fadeInLeft ease 1s;
       }
 
       .homePageTitle {
@@ -204,25 +218,36 @@ const Home = () => (
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        animation: fadeInLeft ease 1s;
       }
 
       .features > h1 {
         color: white;
         text-align: center;
-        margin-bottom: 80px;
         font-style: normal;
         font-weight: bold;
         font-size: 64px;
         line-height: 75px;
         text-align: center;
+        animation: fadeInLeft ease 1s;
+      }
+
+      .features > p {
+        color: white;
+        text-align: center;
+        margin: 60px 0 80px 0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 75px;
+        text-align: center;
+        max-width: 90%;
+        animation: fadeInLeft ease 1s;
       }
 
       .features > img {
-        width: 90%;
-      }
-
-      .modpacksBrowser {
         max-width: 90%;
+        animation: fadeInLeft ease 1s;
       }
 
       .screenshots {
@@ -251,6 +276,7 @@ const Home = () => (
         height: auto;
         top: 180px;
         z-index: 0;
+        animation: fadeInTop ease 1s;
       }
 
       #download {
@@ -264,6 +290,10 @@ const Home = () => (
       .logo {
         width: 54px;
         margin: 0 0 0 24px;
+      }
+
+      .modpacksBrowser {
+        max-width: 90%;
       }
 
       .button {
@@ -293,6 +323,7 @@ const Home = () => (
         justify-content: space-between;
         width: 900px;
         height: 350px;
+        animation: fadeInLeft ease 1s;
       }
 
       .column {
@@ -313,7 +344,48 @@ const Home = () => (
         color: white;
       }
 
+      
+      @keyframes fadeInTop {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInLeft {
+        0% {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @media only screen and (min-height: 800px && max-height: 1000px) {
+        .container {
+          height: 500vh;
+        }
+
+        .features {
+          margin-top: 900px;
+        }
+
+        .isometric {
+          max-width: 85%;
+        }
+      }
+
       @media only screen and (max-height: 800px) {
+        .container {
+          height: 550vh;
+        }
+
         .features {
           margin-top: 900px;
         }
@@ -324,6 +396,32 @@ const Home = () => (
       }
 
       @media only screen and (max-height: 700px) {
+        .container {
+          height: 600vh;
+        }
+
+        .features {
+          margin-top: 900px;
+        }
+
+        .isometric {
+          max-width: 75%;
+        }
+
+        .reasons {
+          height: 1400px;
+        }
+
+        .reasons > .column {
+          height: 300px;
+        }
+      }
+
+      @media only screen and (max-height: 650px) {
+        .container {
+          height: 700vh;
+        }
+
         .features {
           margin-top: 900px;
         }
@@ -342,10 +440,6 @@ const Home = () => (
       }
 
       @media only screen and (max-width: 1000px) {
-        .container {
-          height: 500vh;
-        }
-
         .downloadButton {
           display: none !important;
         }
@@ -402,6 +496,7 @@ const Home = () => (
           font-size: 55px;
         }
       }
+
       @media only screen and (max-width: 420px) {
         .homePageTitle {
           max-width: 350px;

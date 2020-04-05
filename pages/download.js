@@ -92,13 +92,13 @@ const Download = () => {
           </Link>
         </div>
       </div>
-      {/* <img
-        alt="logo"
-        src="https://cdn.assets-gdevs.com/gdLogo.png"
-        className="logobig"
-      /> */}
-      <img alt="launcher1" src="https://cdn.assets-gdevs.com/launcher-1.jpg" />
+      <img
+        alt="launcher"
+        src="https://cdn.assets-gdevs.com/launcher-1.jpg"
+        className="launcher1"
+      />
       <div className="gradient">
+        <h1 className="title" >Download the launcher and have fun!</h1>
         <div className="downloadContainer">
           {os ? (
             downloadLauncherBasedOnOs(os)
@@ -151,6 +151,14 @@ const Download = () => {
           background: #355b75;
         }
 
+        .title {
+          color: white;
+          position: absolute;
+          top: 20%;
+          font-weight: 900;
+          animation: fadeInLeft ease 2s;
+        }
+
         .navBar {
           position: absolute;
           top: 0;
@@ -180,15 +188,6 @@ const Download = () => {
           justify-content: center;
         }
 
-        .logoBig {
-          animation: MoveUpDown 2s linear infinite;
-          position: absolute;
-          max-width: 95%;
-          height: auto;
-          top: 180px;
-          z-index: 0;
-        }
-
         #download {
           font-style: normal;
           font-weight: 900;
@@ -200,6 +199,49 @@ const Download = () => {
         .logo {
           width: 54px;
           margin: 0 0 0 24px;
+        }
+
+        @keyframes fadeInTop {
+          0% {
+            opacity: 0;
+            transform: translateY(-20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes fadeInLeft {
+          0% {
+            opacity: 0;
+            transform: translateX(-20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes MoveUpDown {
+          0% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
+        }
+
+        .launcher1 {
+          animation: MoveUpDown 2s linear infinite, fadeInTop ease 2s;
+          position: absolute;
+          max-width: 95%;
+          height: auto;
+          top: 180px;
+          z-index: 0;
         }
 
         .button {
@@ -231,6 +273,7 @@ const Download = () => {
           display: flex;
           flex-direction: column;
           color: white;
+          animation: fadeInLeft ease 1s;
         }
 
         .downloadContainer > .icons {
