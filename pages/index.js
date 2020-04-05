@@ -13,7 +13,7 @@ import {
 const Home = () => (
   <div className="container">
     <div className="navBar">
-      <img alt="logo" src="gdLogo.png" className="logo" />
+    <img alt="logo" src="https://cdn.assets-gdevs.com/gdLogo.png" className="logo" />
       <div className="buttons">
         <Link href="/">
           <div className="button" id="home">
@@ -32,7 +32,7 @@ const Home = () => (
     </div>
     <div className="gradient">
       <div className="homePageTitleContainer">
-        <img alt="logo" src="gdLogo.png" className="logoBig" />
+      <img alt="logobig" src="https://cdn.assets-gdevs.com/gdLogo.png" className="logobig" />
         <div className="homePageTitle">
           <h1>GDLauncher</h1>
           <p>The future of minecraft launchers</p>
@@ -150,6 +150,7 @@ const Home = () => (
         );
         z-index: 1;
       }
+      
 
       .homePageTitleContainer {
         display: flex;

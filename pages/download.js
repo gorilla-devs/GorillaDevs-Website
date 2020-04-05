@@ -18,36 +18,45 @@ const downloadLauncherBasedOnOs = (os) => {
   if (os === "Win32") {
     console.log("OK");
     return (
-      <Button
-        type="primary"
-        className="downloadButton"
-        style={{ display: "flex" }}
-        href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win32-setup.exe"
-      >
-        Download
-      </Button>
+      <div>
+        <Button
+          type="primary"
+          className="downloadButton"
+          style={{ display: "flex" }}
+          href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win32-setup.exe"
+        >
+          Download
+        </Button>
+        <div style={{ textAlign: "center" }}>Windows, installer</div>
+      </div>
     );
   } else if (os === "darwin") {
     return (
-      <Button
-        type="primary"
-        className="downloadButton"
-        href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-darwin-setup.dmg"
-        style={{ display: "flex" }}
-      >
-        Download
-      </Button>
+      <div>
+        <Button
+          type="primary"
+          className="downloadButton"
+          href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-darwin-setup.dmg"
+          style={{ display: "flex" }}
+        >
+          Download
+        </Button>
+        <div style={{ textAlign: "center" }}>MacOs, installer</div>
+      </div>
     );
   } else if (os === "linux") {
     return (
-      <Button
-        type="primary"
-        className="downloadButton"
-        href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-setup.AppImage"
-        style={{ display: "flex" }}
-      >
-        Download
-      </Button>
+      <div>
+        <Button
+          type="primary"
+          className="downloadButton"
+          href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-setup.AppImage"
+          style={{ display: "flex" }}
+        >
+          Download
+        </Button>
+        <div style={{ textAlign: "center" }}>Linux, AppImage</div>
+      </div>
     );
   }
 };
@@ -62,7 +71,11 @@ const Download = () => {
   return (
     <div className="container">
       <div className="navBar">
-        <img alt="logo" src="gdLogo.png" className="logo" />
+        <img
+          alt="logo"
+          src="https://cdn.assets-gdevs.com/gdLogo.png"
+          className="logo"
+        />
         <div className="buttons">
           <Link href="/">
             <div className="button" id="home">
@@ -78,42 +91,52 @@ const Download = () => {
             </div>
           </Link>
         </div>
-        <div className="gradient"></div>
       </div>
-      <div className="downloadContainer">
-        {os ? (
-          downloadLauncherBasedOnOs(os)
-        ) : (
-          <Button type="primary" className="downloadButton">
-            Download
-          </Button>
-        )}
-        <div className="icons">
-          <p>Available for:</p>
-          <FontAwesomeIcon
-            icon={faWindows}
-            size="2x"
-            style={{ color: "white" }}
-          />
-          <FontAwesomeIcon
-            icon={faApple}
-            size="2x"
-            style={{ color: "white" }}
-          />
-          <FontAwesomeIcon
-            icon={faLinux}
-            size="2x"
-            style={{ color: "white" }}
-          />
-        </div>
-        <div className="portableContainer">
-          <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win32-portable.zip">
-            PortableWin
-          </a>
+      {/* <img
+        alt="logo"
+        src="https://cdn.assets-gdevs.com/gdLogo.png"
+        className="logobig"
+      /> */}
+      <img alt="launcher1" src="https://cdn.assets-gdevs.com/launcher-1.jpg" />
+      <div className="gradient">
+        <div className="downloadContainer">
+          {os ? (
+            downloadLauncherBasedOnOs(os)
+          ) : (
+            <Button type="primary" className="downloadButton">
+              Download
+            </Button>
+          )}
+          <div className="icons">
+            <p>Available for:</p>
+            <FontAwesomeIcon
+              onClick={() => setOs("Win32")}
+              icon={faWindows}
+              size="2x"
+              style={{ color: "white", cursor: "pointer" }}
+            />
+            <FontAwesomeIcon
+              onClick={() => setOs("darwin")}
+              icon={faApple}
+              size="2x"
+              style={{ color: "white", cursor: "pointer" }}
+            />
+            <FontAwesomeIcon
+              onClick={() => setOs("linux")}
+              icon={faLinux}
+              size="2x"
+              style={{ color: "white", cursor: "pointer" }}
+            />
+          </div>
+          <div className="portableContainer">
+            <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win32-portable.zip">
+              PortableWin
+            </a>
 
-          <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-portable.zip">
-            PortableLinux
-          </a>
+            <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-portable.zip">
+              PortableLinux
+            </a>
+          </div>
         </div>
       </div>
 
@@ -126,23 +149,6 @@ const Download = () => {
           justify-content: center;
           align-items: center;
           background: #355b75;
-        }
-
-        .gradient {
-          z-index: -1;
-          position: absolute;
-          width: 100%;
-          height: 100vh;
-          left: 0;
-          top: 0;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          background: linear-gradient(
-            180deg,
-            #212b36 50.77%,
-            rgba(33, 43, 54, 0) 100%
-          );
         }
 
         .navBar {
@@ -171,6 +177,16 @@ const Download = () => {
             #212b36 50.77%,
             rgba(33, 43, 54, 0) 100%
           );
+          justify-content: center;
+        }
+
+        .logoBig {
+          animation: MoveUpDown 2s linear infinite;
+          position: absolute;
+          max-width: 95%;
+          height: auto;
+          top: 180px;
+          z-index: 0;
         }
 
         #download {
@@ -218,7 +234,7 @@ const Download = () => {
         }
 
         .downloadContainer > .icons {
-          margin-top: 10px;
+          margin-top: 30px;
           display: flex;
           flex-direction: row;
           justify-content: space-between;
