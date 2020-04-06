@@ -7,6 +7,7 @@ import {
   faWindows,
   faApple,
 } from "@fortawesome/free-brands-svg-icons";
+import theme from "./theme";
 
 // GDLauncher-win32-portable.zip
 
@@ -98,7 +99,7 @@ const Download = () => {
         className="launcher1"
       />
       <div className="gradient">
-        <h1 className="title" >Download the launcher and have fun!</h1>
+        <h1 className="title">Download the launcher and have fun!</h1>
         <div className="downloadContainer">
           {os ? (
             downloadLauncherBasedOnOs(os)
@@ -113,19 +114,19 @@ const Download = () => {
               onClick={() => setOs("Win32")}
               icon={faWindows}
               size="2x"
-              style={{ color: "white", cursor: "pointer" }}
+              style={{ color: theme.palette.text.primary, cursor: "pointer" }}
             />
             <FontAwesomeIcon
               onClick={() => setOs("darwin")}
               icon={faApple}
               size="2x"
-              style={{ color: "white", cursor: "pointer" }}
+              style={{ color: theme.palette.text.primary, cursor: "pointer" }}
             />
             <FontAwesomeIcon
               onClick={() => setOs("linux")}
               icon={faLinux}
               size="2x"
-              style={{ color: "white", cursor: "pointer" }}
+              style={{ color: theme.palette.text.primary, cursor: "pointer" }}
             />
           </div>
           <div className="portableContainer">
@@ -148,11 +149,11 @@ const Download = () => {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          background: #355b75;
+          background: ${theme.palette.primary.dark};
         }
 
         .title {
-          color: white;
+          color: ${theme.palette.text.primary};
           position: absolute;
           top: 20%;
           font-weight: 900;
@@ -237,10 +238,8 @@ const Download = () => {
 
         .launcher1 {
           animation: MoveUpDown 2s linear infinite, fadeInTop ease 2s;
-          position: absolute;
           max-width: 95%;
           height: auto;
-          top: 180px;
           z-index: 0;
         }
 
@@ -258,7 +257,7 @@ const Download = () => {
           flex-direction: row;
           justify-content: space-around;
           align-items: center;
-          color: white;
+          color: ${theme.palette.text.primary};
         }
 
         .buttons > div {
@@ -269,10 +268,12 @@ const Download = () => {
         }
 
         .downloadContainer {
+          position: absolute;
+          top: 30%;
           z-index: 2;
           display: flex;
           flex-direction: column;
-          color: white;
+          color: ${theme.palette.text.primary};
           animation: fadeInLeft ease 1s;
         }
 
@@ -293,6 +294,15 @@ const Download = () => {
           flex-direction: row;
           justify-content: space-between;
           margin: 0;
+        }
+
+        @media only screen and (max-height: 650px) {
+          .container {
+            height: 130vh;
+          }
+          .launcher1 {
+            max-width: 90%;
+          }
         }
       `}</style>
     </div>
