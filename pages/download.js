@@ -9,23 +9,19 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import theme from "../theme";
 
-
 const downloadLauncherBasedOnOs = (os) => {
   console.log("os", os);
   if (os === "Win32" || os === "Win16") {
     console.log("OK");
     return (
-      <div>
-        <Button
-          type="primary"
-          className="downloadButton"
-          style={{ display: "flex" }}
-          href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win32-setup.exe"
-        >
-          Download
-        </Button>
-        <div style={{ textAlign: "center" }}>Windows, installer</div>
-      </div>
+      <Button
+        type="primary"
+        className="downloadButton"
+        style={{ display: "flex" }}
+        href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win32-setup.exe"
+      >
+        Download for Windows
+      </Button>
     );
   } else if (
     os === "Darwin" ||
@@ -34,31 +30,25 @@ const downloadLauncherBasedOnOs = (os) => {
     os === "MacIntel"
   ) {
     return (
-      <div>
-        <Button
-          type="primary"
-          className="downloadButton"
-          href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-darwin-setup.dmg"
-          style={{ display: "flex" }}
-        >
-          Download
-        </Button>
-        <div style={{ textAlign: "center" }}>MacOs, installer</div>
-      </div>
+      <Button
+        type="primary"
+        className="downloadButton"
+        href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-darwin-setup.dmg"
+        style={{ display: "flex" }}
+      >
+        Download for MacOs
+      </Button>
     );
   } else if (os === "linux" || os === "Linux i686" || os === "Linux armv7l") {
     return (
-      <div>
-        <Button
-          type="primary"
-          className="downloadButton"
-          href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-setup.AppImage"
-          style={{ display: "flex" }}
-        >
-          Download
-        </Button>
-        <div style={{ textAlign: "center" }}>Linux, AppImage</div>
-      </div>
+      <Button
+        type="primary"
+        className="downloadButton"
+        href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-setup.AppImage"
+        style={{ display: "flex" }}
+      >
+        Download for Linux
+      </Button>
     );
   }
 };

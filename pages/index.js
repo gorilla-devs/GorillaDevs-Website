@@ -10,6 +10,7 @@ import {
   faThLarge,
   faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
+import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 
 const Home = () => (
   <div className="container">
@@ -35,6 +36,7 @@ const Home = () => (
         </Link>
       </div>
     </div>
+
     <div className="gradient">
       <div className="homePageTitleContainer">
         <img
@@ -45,11 +47,33 @@ const Home = () => (
         <div className="homePageTitle">
           <h1>GDLauncher</h1>
           <p>The future of minecraft launchers</p>
-          <Link href="/download">
-            <Button type="primary" className="downloadButton">
-              Download it Now!
-            </Button>
-          </Link>
+          <div className="homePageRow">
+            <div className="homePageTitleRow">
+              <Link href="/download">
+                <Button type="primary" className="downloadButton">
+                  Download it Now!
+                </Button>
+              </Link>
+              <Link href="/download">
+                <Button
+                  id="discord"
+                  type="primary"
+                  className="downloadButton"
+                  style={{ background: "#7289DA" }}
+                >
+                  Join Discord&nbsp;
+                  <FontAwesomeIcon icon={faDiscord} />
+                </Button>
+              </Link>
+            </div>
+            <a href="https://patreon.com/gorilladevs">
+              <img
+                alt="logo"
+                src="https://cdn.assets-gdevs.com/patreonButton.png"
+                className="patreonButton"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -163,9 +187,6 @@ const Home = () => (
       </div>
       <div className="usefulLinks">
         <h2>Useful Links</h2>
-        <a href="https://github.com/gorilla-devs/GDLauncher/releases">
-          All releases
-        </a>
         <a href="https://github.com/gorilla-devs/GDLauncher/issues">
           Report an issue
         </a>
@@ -179,7 +200,7 @@ const Home = () => (
       <div className="support">
         <h2>Support</h2>
         <a href="mailto:info@gdevs.io">Contact us</a>
-        <a href="">Github</a>
+        <a href="https://github.com/gorilla-devs/GDLauncher">Github</a>
       </div>
     </div>
 
@@ -204,6 +225,12 @@ const Home = () => (
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+      }
+
+      .patreonButton {
+        z-index: 2;
+        width: 200px;
+        margin-top: 25px;
       }
 
       .gradient {
@@ -238,7 +265,7 @@ const Home = () => (
 
       .homePageTitle {
         width: 450px;
-        max-height: 320px;
+        max-height: 340px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -268,6 +295,19 @@ const Home = () => (
         font-weight: normal;
         font-size: 40px;
         line-height: 56px;
+      }
+      .homePageRow {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .homePageTitleRow {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 430px;
       }
 
       .features {
@@ -575,6 +615,17 @@ const Home = () => (
           height: 530px;
           margin: 100px 0 10px 0;
         }
+
+        .homePageTitle {
+          max-height: 400px;
+        }
+
+        .homePageTitleRow {
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          height: 130px;
+        }
       }
 
       @media only screen and (max-height: 650px) {
@@ -604,8 +655,16 @@ const Home = () => (
           height: 720vh;
         }
 
-        .downloadButton {
-          display: none !important;
+        .homePageTitle {
+          max-height: 400px;
+        }
+
+        .homePageTitleRow {
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          justify-content: space-between;
+          height: 130px;
         }
 
         .homePageTitleContainer {
@@ -620,7 +679,7 @@ const Home = () => (
 
         .homePageTitle {
           width: 589px;
-          max-height: 320px;
+          max-height: 380px;
           display: flex;
           flex-direction: column;
           justify-content: center;

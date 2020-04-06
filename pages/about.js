@@ -1,4 +1,5 @@
 import Link from "next/link";
+import theme from "../theme";
 
 const About = () => (
   <div className="container">
@@ -29,7 +30,7 @@ const About = () => (
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: #355b75;
+        background: ${theme.palette.primary.dark};
       }
 
       .gradient {
@@ -79,7 +80,7 @@ const About = () => (
 
       .features > h1 {
         margin-top: 1000px;
-        color: white;
+        color: ${theme.palette.text.primary};
         text-align: center;
         margin-bottom: 80px;
         font-style: normal;
@@ -138,7 +139,7 @@ const About = () => (
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        color: white;
+        color: ${theme.palette.text.primary};
       }
 
       .buttons > div {
