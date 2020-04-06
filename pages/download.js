@@ -16,7 +16,7 @@ const downloadLauncherBasedOnOs = (os) => {
   //  https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win32-setup.exe
   // https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-setup.AppImage
   console.log("os", os);
-  if (os === "Win32") {
+  if (os === "Win32" || os === "Win16") {
     console.log("OK");
     return (
       <div>
@@ -31,7 +31,12 @@ const downloadLauncherBasedOnOs = (os) => {
         <div style={{ textAlign: "center" }}>Windows, installer</div>
       </div>
     );
-  } else if (os === "darwin") {
+  } else if (
+    os === "Darwin" ||
+    os === "Mac68K" ||
+    os === "MacPPC" ||
+    os === "MacIntel"
+  ) {
     return (
       <div>
         <Button
@@ -45,7 +50,7 @@ const downloadLauncherBasedOnOs = (os) => {
         <div style={{ textAlign: "center" }}>MacOs, installer</div>
       </div>
     );
-  } else if (os === "linux") {
+  } else if (os === "linux" || os === "Linux i686" || os === "Linux armv7l") {
     return (
       <div>
         <Button

@@ -659,6 +659,18 @@ const Home = () => (
           max-width: 350px;
         }
       }
+
+      @media only screen and (max-width: 800px) {
+        .screenshotsRow {
+          margin: 40px 0 40px 0;
+          flex-direction: column;
+          justify-content: space-evenly;
+        }
+
+        screenshots:nth-child(2) {
+          flex-direction: column-reverse;
+        }
+      }
     `}</style>
   </div>
 );
