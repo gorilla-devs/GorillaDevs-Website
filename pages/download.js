@@ -7,7 +7,7 @@ import {
   faWindows,
   faApple,
 } from "@fortawesome/free-brands-svg-icons";
-import theme from "./theme";
+import theme from "../theme";
 
 
 const downloadLauncherBasedOnOs = (os) => {
