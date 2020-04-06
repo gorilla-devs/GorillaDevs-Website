@@ -9,12 +9,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import theme from "./theme";
 
-// GDLauncher-win32-portable.zip
 
 const downloadLauncherBasedOnOs = (os) => {
-  //  https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-darwin-setup.dmg
-  //  https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win32-setup.exe
-  // https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-setup.AppImage
   console.log("os", os);
   if (os === "Win32" || os === "Win16") {
     console.log("OK");
@@ -122,7 +118,7 @@ const Download = () => {
               style={{ color: theme.palette.text.primary, cursor: "pointer" }}
             />
             <FontAwesomeIcon
-              onClick={() => setOs("darwin")}
+              onClick={() => setOs("Darwin")}
               icon={faApple}
               size="2x"
               style={{ color: theme.palette.text.primary, cursor: "pointer" }}

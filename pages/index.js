@@ -1,5 +1,5 @@
 import Link from "next/link";
-import theme from "./theme";
+import theme from "../theme";
 import { Button } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -115,7 +115,7 @@ const Home = () => (
           </p>
         </div>
       </div>
-      <div className="screenshotsRow">
+      <div className="screenshotsRowMid">
         <div className="screenshotsRowText">
           <FontAwesomeIcon
             icon={faBolt}
@@ -185,7 +185,7 @@ const Home = () => (
 
     <style jsx>{`
       .container {
-        height: 420vh;
+        height: 460vh;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -271,7 +271,7 @@ const Home = () => (
       }
 
       .features {
-        margin-top: 100vh;
+        margin-top: 120vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -299,7 +299,7 @@ const Home = () => (
         font-size: 25px;
         line-height: 70px;
         text-align: center;
-        max-width: 85%;
+        max-width: 80%;
         animation: fadeInLeft ease 1s;
       }
 
@@ -325,7 +325,17 @@ const Home = () => (
         animation: fadeInLeft ease 1s;
       }
 
+      .screenshotsRowMid {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 70px 0 0 0;
+        animation: fadeInLeft ease 1s;
+      }
+
       .screenshotsRowText {
+        margin: 50px 0 50px 0;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -360,6 +370,10 @@ const Home = () => (
       }
 
       .screenshotsRow > img {
+        max-width: 40%;
+      }
+
+      .screenshotsRowMid > img {
         max-width: 40%;
       }
 
@@ -462,7 +476,7 @@ const Home = () => (
         margin-top: 200px;
         z-index: 2;
         background-color: ${theme.palette.grey[700]};
-        height: 700px;
+        height: 1000px;
         width: 100%;
       }
 
@@ -546,7 +560,7 @@ const Home = () => (
 
       @media only screen and (max-height: 700px) {
         .container {
-          height: 600vh;
+          height: 700vh;
         }
 
         .features {
@@ -558,11 +572,8 @@ const Home = () => (
         }
 
         .reasons {
-          height: 1400px;
-        }
-
-        .reasons > .column {
-          height: 300px;
+          height: 530px;
+          margin: 100px 0 10px 0;
         }
       }
 
@@ -589,6 +600,10 @@ const Home = () => (
       }
 
       @media only screen and (max-width: 1000px) {
+        .container {
+          height: 720vh;
+        }
+
         .downloadButton {
           display: none !important;
         }
@@ -623,7 +638,8 @@ const Home = () => (
           flex-direction: column;
           justify-content: space-enevly;
           width: auto;
-          height: 1200px;
+          height: 1500px;
+          margin: 100px 0 100px 0;
         }
 
         .reasons > .column {
@@ -644,6 +660,18 @@ const Home = () => (
           font-weight: bold;
           font-size: 55px;
         }
+
+        .footer {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .footer > div {
+          width: 130px;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
       }
 
       @media only screen and (max-width: 420px) {
@@ -662,12 +690,16 @@ const Home = () => (
 
       @media only screen and (max-width: 800px) {
         .screenshotsRow {
-          margin: 40px 0 40px 0;
           flex-direction: column;
           justify-content: space-evenly;
+          margin: 50px 0 50px 0;
         }
 
-        screenshots:nth-child(2) {
+        .screenshotsRowText {
+          margin: 40px 0 50px 0;
+        }
+
+        .screenshotsRowMid {
           flex-direction: column-reverse;
         }
       }
