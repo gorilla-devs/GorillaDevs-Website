@@ -515,7 +515,7 @@ const Home = () => (
         margin-top: 200px;
         z-index: 2;
         background-color: ${theme.palette.grey[700]};
-        height: 1000px;
+        height: 300px;
         width: 100%;
       }
 
@@ -657,13 +657,13 @@ const Home = () => (
 
       @media only screen and (max-height: 1000) {
         .container {
-          height: 550vh;
+          height: 600vh;
         }
       }
 
       @media only screen and (max-width: 1000px) {
         .container {
-          height: 700vh;
+          height: 600vh;
         }
 
         .footer{
@@ -729,6 +729,10 @@ const Home = () => (
         .features {
           margin-top: 900px;
         }
+        
+        .features > p{
+          line-height: 30px;
+        }
 
         .features > h1 {
           font-weight: bold;
@@ -740,6 +744,7 @@ const Home = () => (
           justify-content: center;
           align-items: center;
         }
+
         .footer > div {
           width: 130px;
           flex-direction: column;
