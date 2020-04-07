@@ -8,6 +8,7 @@ import {
   faApple,
 } from "@fortawesome/free-brands-svg-icons";
 import theme from "../theme";
+import NavBar from "../components/navbar";
 
 const downloadLauncherBasedOnOs = (os) => {
   console.log("os", os);
@@ -63,26 +64,7 @@ const Download = () => {
   return (
     <div className="container">
       <div className="navBar">
-        <img
-          alt="logo"
-          src="https://cdn.assets-gdevs.com/gdLogo.png"
-          className="logo"
-        />
-        <div className="buttons">
-          <Link href="/">
-            <div className="button" id="home">
-              Home
-            </div>
-          </Link>
-          <Link href="/about">
-            <div className="button">About</div>
-          </Link>
-          <Link href="/download">
-            <div id="download" className="button">
-              Download
-            </div>
-          </Link>
-        </div>
+        <NavBar />
       </div>
       <img
         alt="launcher"

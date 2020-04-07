@@ -11,30 +11,12 @@ import {
   faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
+import NavBar from "../components/navbar";
 
 const Home = () => (
   <div className="container">
     <div className="navBar">
-      <img
-        alt="logo"
-        src="https://cdn.assets-gdevs.com/gdLogo.png"
-        className="logo"
-      />
-      <div className="buttons">
-        <Link href="/">
-          <div className="button" id="home">
-            Home
-          </div>
-        </Link>
-        <Link href="/about">
-          <div className="button">About</div>
-        </Link>
-        <Link href="/download">
-          <div id="download" className="button">
-            Download
-          </div>
-        </Link>
-      </div>
+      <NavBar />
     </div>
 
     <div className="gradient">
