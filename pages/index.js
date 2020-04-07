@@ -652,7 +652,11 @@ const Home = () => (
 
       @media only screen and (max-width: 1000px) {
         .container {
-          height: 720vh;
+          height: 550vh;
+        }
+
+        .footer{
+          height: 500px;
         }
 
         .homePageTitle {
@@ -745,6 +749,28 @@ const Home = () => (
         .homePageTitle > p {
           max-width: 350px;
         }
+
+        .homePageTitleRow{
+          max-width: 360px;
+        }
+
+        .isometric {
+          display: none;
+        }
+
+        .logoBig {
+          margin-bottom: 30px;
+        }
+
+        #download {
+          display: none;
+        }
+
+        .buttons {
+          justify-content: space-evenly;
+        }
+
+        .
       }
 
       @media only screen and (max-width: 800px) {
