@@ -206,7 +206,6 @@ const Home = () => (
 
     <style jsx>{`
       .container {
-        height: 460vh;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -569,6 +568,12 @@ const Home = () => (
           transform: translateX(-20px);
         }
       }
+      @media only screen and (min-height: 1024px) {
+        .container {
+          height: 500vh;
+        }
+
+      }
 
       @media only screen and (min-height: 800px && max-height: 1000px) {
         .container {
@@ -650,9 +655,15 @@ const Home = () => (
         }
       }
 
-      @media only screen and (max-width: 1000px) {
+      @media only screen and (max-height: 1000) {
         .container {
           height: 550vh;
+        }
+      }
+
+      @media only screen and (max-width: 1000px) {
+        .container {
+          height: 700vh;
         }
 
         .footer{
