@@ -6,6 +6,8 @@ import {
   faLinux,
   faWindows,
   faApple,
+  faGithub,
+  faDiscord,
 } from "@fortawesome/free-brands-svg-icons";
 import theme from "../theme";
 
@@ -68,6 +70,36 @@ const Download = () => {
           src="https://cdn.assets-gdevs.com/gdLogo.png"
           className="logoBig"
         />
+        <div className="supportButtons">
+          <Button
+            type="primary"
+            href="https://github.com/gorilla-devs/GDLauncher"
+            className="githubButton"
+          >
+            <FontAwesomeIcon
+              icon={faGithub}
+              size="2x"
+              style={{ color: theme.palette.text.primary, cursor: "pointer" }}
+            />
+            &nbsp;Github
+          </Button>
+          <Button
+            type="primary"
+            className="discordButton"
+            href="https://discord.gg/ZxRxPqn"
+          >
+            <FontAwesomeIcon
+              icon={faDiscord}
+              size="2x"
+              style={{
+                color: theme.palette.text.primary,
+                cursor: "pointer",
+                background: "#7289DA",
+              }}
+            />
+            &nbsp;Discord
+          </Button>
+        </div>
         {/* <h1 className="title">Download the launcher and have fun!</h1> */}
         <div className="downloadContainer">
           {os ? (
@@ -109,13 +141,9 @@ const Download = () => {
           </div>
         </div>
         <div className="sponsor">
-          <h2>Spondored by:</h2>
-          <img
-            alt="sponsor"
-            src=""
-          />
+          <h2>Sponsored by:</h2>
+          <img alt="sponsor" src="" />
         </div>
-        <div className="gradient" />
       </div>
 
       <style jsx>{`
@@ -130,10 +158,20 @@ const Download = () => {
         }
 
         .innerContainer {
+          width: 100%;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           align-items: center;
+        }
+
+        .supportButtons {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          z-index: 2;
+          margin-bottom: 30px;
         }
 
         .logoBig {
@@ -268,6 +306,7 @@ const Download = () => {
           flex-direction: row;
           justify-content: space-between;
           margin: 0;
+          color: #5a7391 !important;
         }
 
         @media only screen and (max-width: 414px) {
