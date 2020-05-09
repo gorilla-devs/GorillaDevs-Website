@@ -9,6 +9,15 @@ import {
   faGithub,
   faDiscord,
 } from "@fortawesome/free-brands-svg-icons";
+import {
+  faDownload,
+  faCode,
+  faUser,
+  faThumbsUp,
+  faTrophy,
+} from "@fortawesome/free-solid-svg-icons";
+import Navbar from "../components/navbar";
+import BisectHosting from "../components/BisecHosting";
 import theme from "../theme";
 
 const downloadLauncherBasedOnOs = (os) => {
@@ -64,97 +73,192 @@ const Download = () => {
 
   return (
     <div className="container">
-      <div className="innerContainer">
-        <img
-          alt="logoBig"
-          src="https://cdn.assets-gdevs.com/gdLogo.png"
-          className="logoBig"
-        />
-        <div className="supportButtons">
-          <Button
-            type="primary"
-            href="https://github.com/gorilla-devs/GDLauncher"
-            className="githubButton"
-          >
-            <FontAwesomeIcon
-              icon={faGithub}
-              size="2x"
-              style={{ color: theme.palette.text.primary, cursor: "pointer" }}
-            />
-            &nbsp;Github
-          </Button>
-          <Button
-            type="primary"
-            className="discordButton"
-            href="https://discord.gg/ZxRxPqn"
-          >
-            <FontAwesomeIcon
-              icon={faDiscord}
-              size="2x"
+      <Navbar />
+      <div className="PartneredContainer">
+        <BisectHosting size={10} />
+      </div>
+      <img
+        src="https://cdn.assets-gdevs.com/isometricDesign.png"
+        className="isometricDesign"
+      />
+      <div className="firstView">
+        <div className="innerContainer">
+          <div className="innerContainerText">
+            <h1>GDLauncher</h1>
+            <p>The future of minecraft launchers</p>
+          </div>
+          <div className="supportButtons">
+            <Button
+              type="primary"
+              href="https://github.com/gorilla-devs/GDLauncher"
+              className="downloadButton"
               style={{
                 color: theme.palette.text.primary,
                 cursor: "pointer",
-                background: "#7289DA",
+                background: theme.palette.primary.main,
+                borderColor: theme.palette.primary.main,
               }}
-            />
-            &nbsp;Discord
-          </Button>
-        </div>
-        {/* <h1 className="title">Download the launcher and have fun!</h1> */}
-        <div className="downloadContainer">
+            >
+              <FontAwesomeIcon icon={faDownload} size="2x" />
+              &nbsp;Download Now!
+            </Button>
+            <Button
+              type="primary"
+              href="https://github.com/gorilla-devs/GDLauncher"
+              className="githubButton"
+            >
+              <FontAwesomeIcon
+                icon={faGithub}
+                size="2x"
+                style={{ color: theme.palette.text.primary, cursor: "pointer" }}
+              />
+              &nbsp;Github
+            </Button>
+            <Button
+              type="primary"
+              className="discordButton"
+              href="https://discord.gg/ZxRxPqn"
+            >
+              <FontAwesomeIcon
+                icon={faDiscord}
+                size="2x"
+                style={{
+                  color: theme.palette.text.primary,
+                  cursor: "pointer",
+                  background: "#7289DA",
+                }}
+              />
+              &nbsp;Discord
+            </Button>
+          </div>
+          {/* <h1 className="title">Download the launcher and have fun!</h1> */}
+          {/* <div className="downloadContainer">
           {os ? (
             downloadLauncherBasedOnOs(os)
           ) : (
             <Button type="primary" className="downloadButton">
-              Download
+            Download
             </Button>
-          )}
-          <div className="icons">
+            )}
+            <div className="icons">
             <p>Available for:</p>
             <FontAwesomeIcon
-              onClick={() => setOs("Win32")}
-              icon={faWindows}
-              size="2x"
-              style={{ color: theme.palette.text.primary, cursor: "pointer" }}
+            onClick={() => setOs("Win32")}
+            icon={faWindows}
+            size="2x"
+            style={{ color: theme.palette.text.primary, cursor: "pointer" }}
             />
             <FontAwesomeIcon
-              onClick={() => setOs("Darwin")}
-              icon={faApple}
-              size="2x"
-              style={{ color: theme.palette.text.primary, cursor: "pointer" }}
+            onClick={() => setOs("Darwin")}
+            icon={faApple}
+            size="2x"
+            style={{ color: theme.palette.text.primary, cursor: "pointer" }}
             />
             <FontAwesomeIcon
-              onClick={() => setOs("linux")}
-              icon={faLinux}
-              size="2x"
-              style={{ color: theme.palette.text.primary, cursor: "pointer" }}
+            onClick={() => setOs("linux")}
+            icon={faLinux}
+            size="2x"
+            style={{ color: theme.palette.text.primary, cursor: "pointer" }}
             />
-          </div>
-          <div className="portableContainer">
+            </div>
+            <div className="portableContainer">
             <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win32-portable.zip">
-              PortableWin
+            PortableWin
             </a>
-
+            
             <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-portable.zip">
-              PortableLinux
+            PortableLinux
             </a>
+            </div>
+          </div> */}
+        </div>
+      </div>
+      <div className="whyGd">
+        <h1>Why use GDLauncher?</h1>
+        <div className="whyGdPreview">
+          <div className="column">
+            <div className="rect">
+              <FontAwesomeIcon icon={faUser} size="4x" />
+              <h2>We Listen</h2>
+            </div>
+            <div className="rect">
+              <FontAwesomeIcon icon={faCode} size="4x" />
+              <h2>Open Source</h2>
+            </div>
+          </div>
+          <img
+            src="https://cdn.assets-gdevs.com/layout.png"
+            className="layout"
+          />
+          <div className="column">
+            <div className="rect">
+              <FontAwesomeIcon icon={faThumbsUp} size="4x" />
+              <h2>Easy to use</h2>
+            </div>
+            <div className="rect">
+              <FontAwesomeIcon icon={faTrophy} size="4x" />
+              <h2>User Friendly</h2>
+            </div>
           </div>
         </div>
-        <div className="sponsor">
-          <h2>Sponsored by:</h2>
-          <img alt="sponsor" src="" />
+      </div>
+      <div className="Features">
+        <div className="leftImgFeature">
+          <img
+            src="https://cdn.assets-gdevs.com/launcher-1.jpg"
+            className="layout"
+          />
+          <div>
+            <h1>Easily Manage And Create Instances</h1>
+            <p>
+              You can easily download vanilla or forge instances and add mods to
+              it.
+            </p>
+          </div>
         </div>
+        <div className="rightImgFeature">
+          <div>
+            <h1>Easily Manage And Create Instances</h1>
+            <p>
+              You can easily download vanilla or forge instances and add mods to
+              it.
+            </p>
+            <img
+              src="https://cdn.assets-gdevs.com/launcher-1.jpg"
+              className="layout"
+            />
+          </div>
+        </div>
+        <div className="rightImgFeature"></div>
+        <div className="leftImgFeature"></div>
       </div>
 
       <style jsx>{`
         .container {
-          height: 100vh;
+          height: 700vh;
           width: 100%;
           display: flex;
           flex-direction: column;
-          justify-content: center;
           align-items: center;
           background: ${theme.palette.primary.dark};
+          overflow-x: hidden;
+        }
+
+        .PartneredContainer {
+          display: absolute;
+          left: 50%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .isometricDesign {
+          position: absolute;
+          right: 0;
+          top: 180px;
+          z-index: 0;
         }
 
         .innerContainer {
@@ -163,6 +267,36 @@ const Download = () => {
           flex-direction: column;
           justify-content: space-between;
           align-items: center;
+          z-index: 1;
+        }
+
+        .innerContainerText {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          color: ${theme.palette.text.primary};
+        }
+
+        .innerContainerText > h1 {
+          width: 400px;
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: 900;
+          font-size: 72px;
+          line-height: 84px;
+          color: ${theme.palette.text.primary};
+        }
+
+        .innerContainerText > p {
+          width: 510px;
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 48px;
+          line-height: 56px;
+          text-align: center;
         }
 
         .supportButtons {
@@ -174,53 +308,99 @@ const Download = () => {
           margin-bottom: 30px;
         }
 
-        .logoBig {
-          width: 250px;
-          z-index: 1;
-          margin-bottom: 35px;
-          animation: fadeInTop ease 2s, MoveUpDown 2s;
+        .firstView {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
+          height: 100vh;
         }
 
-        .title {
+        .whyGd {
+          margin-top: 400px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100vh;
+        }
+
+        .whyGd > h1 {
+          width: 675px;
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 64px;
+          line-height: 75px;
+          text-align: center;
+          margin-bottom: 50px;
           color: ${theme.palette.text.primary};
-          z-index: 1;
-          font-weight: 900;
-          animation: fadeInLeft ease 2s;
         }
 
-        .sponsor {
-          z-index: 2;
-          margin-top: 60px;
+        .whyGdPreview {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 1300px;
+        }
+
+        .whyGdPreview > .column {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          animation: fadeInLeft ease 2s;
         }
 
-        .sponsor > h2 {
-          text-align: center;
+        .rect {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 176px;
+          height: 140px;
+          border-radius: 5px;
+          background: ${theme.palette.grey[700]};
           color: ${theme.palette.text.primary};
         }
 
-        .sponsor > img {
-          width: 400px;
-        }
-
-        .gradient {
-          position: absolute;
-          width: 100%;
-          height: 100vh;
-          left: 0;
-          top: 0;
+        .Features {
           display: flex;
           flex-direction: column;
-          align-items: center;
-          background: linear-gradient(
-            180deg,
-            #212b36 50.77%,
-            rgba(33, 43, 54, 0) 100%
-          );
           justify-content: center;
+          align-items: center;
+        }
+
+        .leftImgFeature {
+          display: flex;
+          justify-content: space-between;
+          width: 70%;
+        }
+
+        .leftImgFeature > div > h1 {
+          width: 400px;
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: bold !important;
+          font-size: 30px;
+          line-height: 42px;
+        }
+
+        .leftImgFeature > div > p {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 30px;
+          line-height: 42px;
+        }
+
+        .leftImgFeature > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 600px;
+          padding: 20px;
+          margin-left: 50px;
         }
 
         @keyframes fadeInTop {
@@ -306,7 +486,10 @@ const Download = () => {
           flex-direction: row;
           justify-content: space-between;
           margin: 0;
-          color: #5a7391 !important;
+        }
+
+        .portableContainer a {
+          color: #5a7391;
         }
 
         @media only screen and (max-width: 414px) {
