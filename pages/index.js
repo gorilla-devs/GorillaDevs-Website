@@ -74,7 +74,7 @@ const Download = () => {
   return (
     <div className="container">
       <Navbar />
-      <div className="PartneredContainer">
+      <div id="home" className="PartneredContainer">
         <BisectHosting size={10} />
       </div>
       <img
@@ -131,46 +131,6 @@ const Download = () => {
               &nbsp;Discord
             </Button>
           </div>
-          {/* <h1 className="title">Download the launcher and have fun!</h1> */}
-          {/* <div className="downloadContainer">
-          {os ? (
-            downloadLauncherBasedOnOs(os)
-          ) : (
-            <Button type="primary" className="downloadButton">
-            Download
-            </Button>
-            )}
-            <div className="icons">
-            <p>Available for:</p>
-            <FontAwesomeIcon
-            onClick={() => setOs("Win32")}
-            icon={faWindows}
-            size="2x"
-            style={{ color: theme.palette.text.primary, cursor: "pointer" }}
-            />
-            <FontAwesomeIcon
-            onClick={() => setOs("Darwin")}
-            icon={faApple}
-            size="2x"
-            style={{ color: theme.palette.text.primary, cursor: "pointer" }}
-            />
-            <FontAwesomeIcon
-            onClick={() => setOs("linux")}
-            icon={faLinux}
-            size="2x"
-            style={{ color: theme.palette.text.primary, cursor: "pointer" }}
-            />
-            </div>
-            <div className="portableContainer">
-            <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win32-portable.zip">
-            PortableWin
-            </a>
-            
-            <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-portable.zip">
-            PortableLinux
-            </a>
-            </div>
-          </div> */}
         </div>
       </div>
       <div className="whyGd">
@@ -203,7 +163,7 @@ const Download = () => {
         </div>
       </div>
       <div className="Features">
-        <div className="leftImgFeature">
+        <div className="ImgFeature">
           <img
             src="https://cdn.assets-gdevs.com/launcher-1.jpg"
             className="layout"
@@ -216,21 +176,115 @@ const Download = () => {
             </p>
           </div>
         </div>
-        <div className="rightImgFeature">
+        <div className="ImgFeature">
           <div>
-            <h1>Easily Manage And Create Instances</h1>
+            <h1>Directly Download CurseForge's Modpacks</h1>
             <p>
-              You can easily download vanilla or forge instances and add mods to
-              it.
+              From our launcher you can easily download curseforge's modpacks
+              and start to play!
             </p>
-            <img
-              src="https://cdn.assets-gdevs.com/launcher-1.jpg"
-              className="layout"
-            />
+          </div>
+          <img
+            src="https://cdn.assets-gdevs.com/modpacksBrowser.png"
+            className="layout"
+          />
+        </div>
+        <div className="ImgFeature">
+          <img
+            src="https://cdn.assets-gdevs.com/instanceCreation.PNG"
+            className="layout"
+          />
+          <div>
+            <h1>Support for Vanilla, Forge and Fabric</h1>
+            <p>
+              You can play Vanilla, forge and fabric directly from the launcher,
+              without needing to download something esle
+            </p>
+          </div>
+        </div>
+        <div className="ImgFeature">
+          <div>
+            <h1>Build in mod manager</h1>
+            <p>You can easily download single mods to add to your instance</p>
+          </div>
+          <img
+            src="https://cdn.assets-gdevs.com/modsManager.PNG"
+            className="layout"
+          />
+        </div>
+        <div className="ImgFeature">
+          <img
+            src="https://cdn.assets-gdevs.com/javaSetup.png"
+            className="layout"
+          />
+          <div>
+            <h1>Auto java setup</h1>
+            <p>You don't need anymore to download java, we'll do it for you!</p>
           </div>
         </div>
         <div className="rightImgFeature"></div>
-        <div className="leftImgFeature"></div>
+        <div className="ImgFeature"></div>
+      </div>
+      <div className="patreonContainer">
+        <div>
+          <h1>Donate To Support GDLauncher</h1>
+          <p>
+            If you like GDLauncher, consider becoming a Patron to help it grow.
+            Even a dollar can make a difference!
+          </p>
+          <img
+            src="https://cdn.assets-gdevs.com/patreonButton.png"
+            className="layout"
+          />
+        </div>
+      </div>
+      <div id="downloadContainer" className="downloadContainer">
+        <div className="downloadInnerContainer">
+          <img
+            src="https://cdn.assets-gdevs.com/launcher-1.jpg"
+            className="layout"
+          />
+          <div className="downloadButtons">
+            <h1 className="title">Download GDLauncher Now!</h1>
+            {os ? (
+              downloadLauncherBasedOnOs(os)
+            ) : (
+              <Button type="primary" className="downloadButton">
+                Download
+              </Button>
+            )}
+            <div className="icons">
+              <p>Available for:</p>
+              <FontAwesomeIcon
+                onClick={() => setOs("Win32")}
+                icon={faWindows}
+                size="2x"
+                style={{ color: theme.palette.text.primary, cursor: "pointer" }}
+              />
+              <FontAwesomeIcon
+                onClick={() => setOs("Darwin")}
+                icon={faApple}
+                size="2x"
+                style={{ color: theme.palette.text.primary, cursor: "pointer" }}
+              />
+              <FontAwesomeIcon
+                onClick={() => setOs("linux")}
+                icon={faLinux}
+                size="2x"
+                style={{ color: theme.palette.text.primary, cursor: "pointer" }}
+              />
+            </div>
+            <div className="portableContainer">
+              <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win32-portable.zip">
+                PortableWin
+              </a>
+
+              <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-portable.zip">
+                PortableLinux
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <style jsx>{`
@@ -370,13 +424,14 @@ const Download = () => {
           align-items: center;
         }
 
-        .leftImgFeature {
+        .ImgFeature {
           display: flex;
           justify-content: space-between;
           width: 70%;
+          margin: 50px 0;
         }
 
-        .leftImgFeature > div > h1 {
+        .ImgFeature > div > h1 {
           width: 400px;
           font-family: Roboto;
           font-style: normal;
@@ -385,7 +440,7 @@ const Download = () => {
           line-height: 42px;
         }
 
-        .leftImgFeature > div > p {
+        .ImgFeature > div > p {
           font-family: Roboto;
           font-style: normal;
           font-weight: 300;
@@ -393,7 +448,7 @@ const Download = () => {
           line-height: 42px;
         }
 
-        .leftImgFeature > div {
+        .ImgFeature > div {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -401,6 +456,97 @@ const Download = () => {
           width: 600px;
           padding: 20px;
           margin-left: 50px;
+        }
+
+        .patreonContainer {
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .downloadContainer {
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .downloadInnerContainer {
+          width: 70%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .downloadButtons {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-left: 40px;
+        }
+
+        .downloadButtons > .icons {
+          margin-top: 15px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 200px;
+        }
+
+        .downloadButtons > h1 {
+          text-align: center;
+          width: 459px;
+
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 36px;
+          line-height: 42px;
+        }
+
+        .patreonContainer > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .patreonContainer > div > h1 {
+          height: 42px;
+
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: 900;
+          font-size: 36px;
+          line-height: 42px;
+        }
+
+        .patreonContainer > div > p {
+          height: 56px;
+
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 28px;
+          text-align: center;
+        }
+
+        .portableContainer {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin: 0;
+          width: 200px;
+        }
+
+        .portableContainer a {
+          color: #5a7391;
         }
 
         @keyframes fadeInTop {

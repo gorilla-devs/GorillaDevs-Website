@@ -18,11 +18,11 @@ const NavBar = () => (
         <Link href="/guide">
           <div className="button">Guide</div>
         </Link>
-        <Link href="/download">
+        <a href="#downloadContainer">
           <div id="download" className="button">
             Download
           </div>
-        </Link>
+        </a>
       </div>
     </div>
 
