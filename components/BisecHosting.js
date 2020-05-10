@@ -1,7 +1,7 @@
 import Link from "next/link";
 import theme from "../theme";
 const BisectHosting = ({ size, onClick, showPointerCursor }) => (
-  <div>
+  <a href="https://www.bisecthosting.com/">
     <svg
       onClick={onClick}
       viewBox="0 0 241.66 78.82"
@@ -76,14 +76,13 @@ const BisectHosting = ({ size, onClick, showPointerCursor }) => (
 
       * {
         cursor: ${(props) => (props.showPointerCursor ? "pointer" : "auto")};
-        opacity: 0.9;
       }
 
       svg * {
         transition: opacity 0.1s ease-in-out;
       }
     `}</style>
-  </div>
+  </a>
 );
 
 export default BisectHosting;

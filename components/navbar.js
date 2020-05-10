@@ -28,8 +28,8 @@ const NavBar = () => (
 
     <style jsx>{`
       .navBar {
-        position: absolute;
-        top: 0;
+        position: fixed;
+        top: 40px;
         left: 0;
         z-index: 2;
         width: 100%;
@@ -38,6 +38,7 @@ const NavBar = () => (
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        background: ${theme.palette.primary.dark}
       }
 
       

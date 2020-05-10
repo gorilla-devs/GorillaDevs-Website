@@ -29,7 +29,7 @@ const downloadLauncherBasedOnOs = (os) => {
         type="primary"
         className="downloadButton"
         style={{ display: "flex" }}
-        href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win32-setup.exe"
+        href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win-setup.exe"
       >
         Download for Windows
       </Button>
@@ -44,7 +44,7 @@ const downloadLauncherBasedOnOs = (os) => {
       <Button
         type="primary"
         className="downloadButton"
-        href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-darwin-setup.dmg"
+        href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-mac-setup.dmg"
         style={{ display: "flex" }}
       >
         Download for MacOs
@@ -73,11 +73,11 @@ const Download = () => {
 
   return (
     <div className="container">
-      <Navbar />
       <div id="home" className="PartneredContainer">
-        <h3>Partnered with:</h3>
-        <BisectHosting showPointerCursor size={70} />
+        <h3>Partnered with:&nbsp;</h3>
+        <BisectHosting showPointerCursor size={200} />
       </div>
+      <Navbar />
       <div className="firstView">
         <img
           src="https://cdn.assets-gdevs.com/isometricDesign.png"
@@ -172,8 +172,8 @@ const Download = () => {
           <div>
             <h1>Easily Manage And Create Instances</h1>
             <p>
-              You can easily download vanilla or forge instances and add mods to
-              it.
+              You can easily download vanilla, forge or fabric instances and add
+              mods to it.
             </p>
           </div>
         </div>
@@ -220,7 +220,10 @@ const Download = () => {
           />
           <div>
             <h1>Auto java setup</h1>
-            <p>You don't need anymore to download java, we'll do it for you!</p>
+            <p>
+              You don't need to download java anymore, since we'll do it for
+              you!
+            </p>
           </div>
         </div>
         <div className="rightImgFeature"></div>
@@ -278,11 +281,11 @@ const Download = () => {
               />
             </div>
             <div className="portableContainer">
-              <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win32-portable.zip">
+              <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win-portable.zip">
                 PortableWin
               </a>
 
-              <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-portable.zip">
+              <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-portable.snap">
                 PortableLinux
               </a>
             </div>
@@ -302,16 +305,15 @@ const Download = () => {
         }
 
         .PartneredContainer {
-          width: 200px;
+          width: 100%;
           display: flex;
-          flex-direction: column;
-          position: absolute;
-          top: 40px;
-          left: 45%;
+          // flex-direction: column;
+          position: fixed;
           display: flex;
-          flex-direction: column;
-          justify-content: space-between;
+          justify-content: center;
           align-items: center;
+          z-index: 4;
+          background: ${theme.palette.grey[800]};
         }
 
         .PartneredContainer > h3 {
@@ -319,7 +321,7 @@ const Download = () => {
           font-family: FF Mark W05;
           font-style: normal;
           font-weight: 900;
-          font-size: 24px;
+          font-size: 16px;
           line-height: 28px;
         }
         .firstView {
@@ -334,7 +336,7 @@ const Download = () => {
         .isometricDesign {
           position: absolute;
           right: 0;
-          top: 10%;
+          top: 15%;
           z-index: 0;
           width: 90%;
         }
