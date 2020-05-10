@@ -305,7 +305,7 @@ const Download = () => {
           flex-direction: column;
           position: absolute;
           top: 40px;
-          left: 50%;
+          left: 45%;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
