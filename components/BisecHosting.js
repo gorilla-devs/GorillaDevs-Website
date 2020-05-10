@@ -8,6 +8,13 @@ const BisectHosting = ({ size, onClick, showPointerCursor }) => (
       size={size}
       showPointerCursor={showPointerCursor}
     >
+      <defs>
+        <style>
+          {
+            ".prefix__cls-1{fill:#fff}.prefix__cls-2{fill:#0d1129}.prefix__cls-3{fill:#03ddff}"
+          }
+        </style>
+      </defs>
       <g id="prefix__Layer_2" data-name="Layer 2">
         <g id="prefix__Layer_1-2" data-name="Layer 1">
           <path

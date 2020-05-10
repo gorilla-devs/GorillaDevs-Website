@@ -15,9 +15,9 @@ const NavBar = () => (
             Home
           </div>
         </Link>
-        <Link href="/guide">
+        <a href="https://github.com/gorilla-devs/GDLauncher/wiki">
           <div className="button">Guide</div>
-        </Link>
+        </a>
         <a href="#downloadContainer">
           <div id="download" className="button">
             Download
@@ -56,6 +56,10 @@ const NavBar = () => (
 
       .button {
         margin: 10px;
+      }
+
+      a{
+        color: ${theme.palette.text.primary}
       }
 
       .buttons {

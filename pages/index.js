@@ -75,13 +75,14 @@ const Download = () => {
     <div className="container">
       <Navbar />
       <div id="home" className="PartneredContainer">
-        <BisectHosting size={10} />
+        <h3>Partnered with:</h3>
+        <BisectHosting showPointerCursor size={70} />
       </div>
-      <img
-        src="https://cdn.assets-gdevs.com/isometricDesign.png"
-        className="isometricDesign"
-      />
       <div className="firstView">
+        <img
+          src="https://cdn.assets-gdevs.com/isometricDesign.png"
+          className="isometricDesign"
+        />
         <div className="innerContainer">
           <div className="innerContainerText">
             <h1>GDLauncher</h1>
@@ -90,7 +91,7 @@ const Download = () => {
           <div className="supportButtons">
             <Button
               type="primary"
-              href="https://github.com/gorilla-devs/GDLauncher"
+              href="#downloadContainer"
               className="downloadButton"
               style={{
                 color: theme.palette.text.primary,
@@ -299,20 +300,41 @@ const Download = () => {
         }
 
         .PartneredContainer {
-          display: absolute;
+          width: 200px;
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 40px;
           left: 50%;
-          width: 100%;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           align-items: center;
         }
 
+        .PartneredContainer > h3 {
+          color: ${theme.palette.text.primary};
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: 900;
+          font-size: 24px;
+          line-height: 28px;
+        }
+        .firstView {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
+          height: 100vh;
+        }
+
         .isometricDesign {
           position: absolute;
           right: 0;
-          top: 180px;
+          top: 10%;
           z-index: 0;
+          width: 90%;
         }
 
         .innerContainer {
@@ -362,16 +384,8 @@ const Download = () => {
           margin-bottom: 30px;
         }
 
-        .firstView {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          width: 100%;
-          height: 100vh;
-        }
-
         .whyGd {
-          margin-top: 400px;
+          margin-top: 600px;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -549,98 +563,14 @@ const Download = () => {
           color: #5a7391;
         }
 
-        @keyframes fadeInTop {
-          0% {
-            opacity: 0;
-            transform: translateY(-20px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes fadeInLeft {
-          0% {
-            opacity: 0;
-            transform: translateX(-20px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        @keyframes MoveUpDown {
-          0% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-20px);
-          }
-          100% {
-            transform: translateY(0px);
-          }
-        }
-
-        .button {
-          margin: 10px;
-        }
-
-        .portableButton {
-          background: transparent;
-        }
-
-        .buttons {
-          width: 400px;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-          align-items: center;
-          color: ${theme.palette.text.primary};
-        }
-
-        .buttons > div {
-          font-style: normal;
-          font-weight: normal;
-          font-size: 16px;
-          line-height: 28px;
-        }
-
-        .downloadContainer {
-          z-index: 1;
-          display: flex;
-          flex-direction: column;
-          color: ${theme.palette.text.primary};
-          animation: fadeInLeft ease 1s;
-        }
-
-        .downloadContainer > .icons {
-          margin-top: 15px;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-        }
-
-        .downloadContainer > p {
-          font-weight: 700;
-          width: 90px;
-        }
-
-        .portableContainer {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          margin: 0;
-        }
-
-        .portableContainer a {
-          color: #5a7391;
-        }
-
         @media only screen and (max-width: 414px) {
-          .sponsor > img {
-            max-width: 200px;
+          .supportButtons {
+            flex-direction: column;
+          }
+
+          .supportButtons > githubButton,
+          discordButton {
+            margin: 0;
           }
         }
       `}</style>
