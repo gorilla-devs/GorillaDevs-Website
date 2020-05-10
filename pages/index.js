@@ -233,10 +233,12 @@ const Download = () => {
             If you like GDLauncher, consider becoming a Patron to help it grow.
             Even a dollar can make a difference!
           </p>
-          <img
-            src="https://cdn.assets-gdevs.com/patreonButton.png"
-            className="layout"
-          />
+          <a href="https://www.patreon.com/gorilladevs">
+            <img
+              src="https://cdn.assets-gdevs.com/patreonButton.png"
+              className="layout"
+            />
+          </a>
         </div>
       </div>
       <div id="downloadContainer" className="downloadContainer">
@@ -314,7 +316,7 @@ const Download = () => {
 
         .PartneredContainer > h3 {
           color: ${theme.palette.text.primary};
-          font-family: Roboto;
+          font-family: FF Mark W05;
           font-style: normal;
           font-weight: 900;
           font-size: 24px;
@@ -357,7 +359,7 @@ const Download = () => {
 
         .innerContainerText > h1 {
           width: 400px;
-          font-family: Roboto;
+          font-family: FF Mark W05;
           font-style: normal;
           font-weight: 900;
           font-size: 72px;
@@ -367,7 +369,7 @@ const Download = () => {
 
         .innerContainerText > p {
           width: 510px;
-          font-family: Roboto;
+          font-family: FF Mark W05;
           font-style: normal;
           font-weight: 500;
           font-size: 48px;
@@ -396,7 +398,7 @@ const Download = () => {
 
         .whyGd > h1 {
           width: 675px;
-          font-family: Roboto;
+          font-family: FF Mark W05;
           font-style: normal;
           font-weight: bold;
           font-size: 64px;
@@ -447,7 +449,7 @@ const Download = () => {
 
         .ImgFeature > div > h1 {
           width: 400px;
-          font-family: Roboto;
+          font-family: FF Mark W05;
           font-style: normal;
           font-weight: bold !important;
           font-size: 30px;
@@ -455,7 +457,7 @@ const Download = () => {
         }
 
         .ImgFeature > div > p {
-          font-family: Roboto;
+          font-family: FF Mark W05;
           font-style: normal;
           font-weight: 300;
           font-size: 30px;
@@ -516,7 +518,7 @@ const Download = () => {
           text-align: center;
           width: 459px;
 
-          font-family: Roboto;
+          font-family: FF Mark W05;
           font-style: normal;
           font-weight: bold;
           font-size: 36px;
@@ -533,7 +535,7 @@ const Download = () => {
         .patreonContainer > div > h1 {
           height: 42px;
 
-          font-family: Roboto;
+          font-family: FF Mark W05;
           font-style: normal;
           font-weight: 900;
           font-size: 36px;
@@ -543,7 +545,7 @@ const Download = () => {
         .patreonContainer > div > p {
           height: 56px;
 
-          font-family: Roboto;
+          font-family: FF Mark W05;
           font-style: normal;
           font-weight: 500;
           font-size: 24px;
