@@ -174,7 +174,8 @@ const Download = () => {
             </p>
           </div>
         </div>
-        <div className="ImgFeature">
+        <div className="ImgFeature ImgFeatureLeft">
+          <img src="https://cdn.assets-gdevs.com/modpacksBrowser.png" />
           <div>
             <h1>Directly Download CurseForge's Modpacks</h1>
             <p>
@@ -182,7 +183,6 @@ const Download = () => {
               and start to play!
             </p>
           </div>
-          <img src="https://cdn.assets-gdevs.com/modpacksBrowser.png" />
         </div>
         <div className="ImgFeature">
           <img src="https://cdn.assets-gdevs.com/instanceCreation.PNG" />
@@ -194,12 +194,12 @@ const Download = () => {
             </p>
           </div>
         </div>
-        <div className="ImgFeature">
+        <div className="ImgFeature ImgFeatureLeft">
+          <img src="https://cdn.assets-gdevs.com/modsManager.PNG" />
           <div>
             <h1>Build in mod manager</h1>
             <p>You can easily download single mods to add to your instance</p>
           </div>
-          <img src="https://cdn.assets-gdevs.com/modsManager.PNG" />
         </div>
         <div className="ImgFeature">
           <img src="https://cdn.assets-gdevs.com/javaSetup.png" />
@@ -211,8 +211,6 @@ const Download = () => {
             </p>
           </div>
         </div>
-        <div className="rightImgFeature"></div>
-        <div className="ImgFeature"></div>
       </div>
       <div className="patreonContainer">
         <div>
@@ -427,6 +425,10 @@ const Download = () => {
           margin: 50px 0;
         }
 
+        .ImgFeatureLeft {
+          flex-direction: row-reverse;
+        }
+
         .ImgFeature > div > h1 {
           width: 400px;
           font-family: FF Mark W05;
@@ -563,12 +565,35 @@ const Download = () => {
             display: none;
           }
 
-          .whyGd > h1{
+          .whyGd {
+            height: 75px;
+          }
+
+          .whyGd > h1 {
             font-size: 30px;
+          }
+
+          .whyGd > .whyGdPreview {
+            display: none;
           }
 
           .ImgFeature {
             flex-direction: column;
+            align-items: center;
+          }
+
+          .ImgFeature > div {
+            margin: 0;
+          }
+
+          .ImgFeature > div > h1 {
+            text-align: center;
+          }
+
+          .ImgFeature > div > p {
+            max-width: 350px;
+            font-size: 25px;
+            text-align: center;
           }
 
           .ImgFeature > img {
