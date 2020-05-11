@@ -79,10 +79,10 @@ const Download = () => {
       </div>
       <Navbar />
       <div className="firstView">
-        <img
+        {/* <img
           src="https://cdn.assets-gdevs.com/isometricDesign.png"
           className="isometricDesign"
-        />
+        /> */}
         <div className="innerContainer">
           <div className="innerContainerText">
             <h1>GDLauncher</h1>
@@ -190,7 +190,7 @@ const Download = () => {
             <h1>Support for Vanilla, Forge and Fabric</h1>
             <p>
               You can play Vanilla, forge and fabric directly from the launcher,
-              without needing to download something esle
+              without needing to download something else.
             </p>
           </div>
         </div>
@@ -198,7 +198,7 @@ const Download = () => {
           <img src="https://cdn.assets-gdevs.com/modsManager.PNG" />
           <div>
             <h1>Build in mod manager</h1>
-            <p>You can easily download single mods to add to your instance</p>
+            <p>You can easily download single mods to add to your instance.</p>
           </div>
         </div>
         <div className="ImgFeature">
@@ -310,14 +310,6 @@ const Download = () => {
           justify-content: center;
           width: 100%;
           height: 100vh;
-        }
-
-        .isometricDesign {
-          position: absolute;
-          right: 0;
-          top: 15%;
-          z-index: 0;
-          width: 70%;
         }
 
         .innerContainer {
@@ -544,8 +536,6 @@ const Download = () => {
           color: #5a7391;
         }
 
-        
-
         @media only screen and (max-width: 414px) {
           .supportButtons {
             flex-direction: column;
@@ -623,20 +613,20 @@ const Download = () => {
           }
 
           ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-  border-radius: 1px;
-}
+            width: 8px;
+            height: 8px;
+            border-radius: 1px;
+          }
 
-::-webkit-scrollbar-thumb {
-  background-color: #909ea4;
-  border-radius: 3px;
-}
+          ::-webkit-scrollbar-thumb {
+            background-color: #909ea4;
+            border-radius: 3px;
+          }
 
-::-webkit-scrollbar-track {
-  background-color: #050818;
-  border-radius: 1px;
-}
+          ::-webkit-scrollbar-track {
+            background-color: #050818;
+            border-radius: 1px;
+          }
         }
       `}</style>
     </div>
