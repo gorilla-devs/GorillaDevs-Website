@@ -74,7 +74,7 @@ const Download = () => {
   return (
     <div className="container">
       <div id="home" className="PartneredContainer">
-        <h3>Partnered with:&nbsp;</h3>
+        <h3>Partnered with:&nbsp;&nbsp;</h3>
         <BisectHosting showPointerCursor size={200} />
       </div>
       <Navbar />
@@ -307,7 +307,7 @@ const Download = () => {
         .PartneredContainer {
           width: 100%;
           display: flex;
-          // flex-direction: column;
+          padding: 5px;
           position: fixed;
           display: flex;
           justify-content: center;

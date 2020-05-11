@@ -29,7 +29,7 @@ const NavBar = () => (
     <style jsx>{`
       .navBar {
         position: fixed;
-        top: 40px;
+        top: 50px;
         left: 0;
         z-index: 2;
         width: 100%;
