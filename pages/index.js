@@ -544,6 +544,8 @@ const Download = () => {
           color: #5a7391;
         }
 
+        
+
         @media only screen and (max-width: 414px) {
           .supportButtons {
             flex-direction: column;
@@ -619,6 +621,22 @@ const Download = () => {
           .patreonContainer > div > a > img {
             width: 350px;
           }
+
+          ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #909ea4;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #050818;
+  border-radius: 1px;
+}
         }
       `}</style>
     </div>
