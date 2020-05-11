@@ -165,10 +165,7 @@ const Download = () => {
       </div>
       <div className="Features">
         <div className="ImgFeature">
-          <img
-            src="https://cdn.assets-gdevs.com/launcher-1.jpg"
-            className="layout"
-          />
+          <img src="https://cdn.assets-gdevs.com/launcher-1.jpg" />
           <div>
             <h1>Easily Manage And Create Instances</h1>
             <p>
@@ -185,16 +182,10 @@ const Download = () => {
               and start to play!
             </p>
           </div>
-          <img
-            src="https://cdn.assets-gdevs.com/modpacksBrowser.png"
-            className="layout"
-          />
+          <img src="https://cdn.assets-gdevs.com/modpacksBrowser.png" />
         </div>
         <div className="ImgFeature">
-          <img
-            src="https://cdn.assets-gdevs.com/instanceCreation.PNG"
-            className="layout"
-          />
+          <img src="https://cdn.assets-gdevs.com/instanceCreation.PNG" />
           <div>
             <h1>Support for Vanilla, Forge and Fabric</h1>
             <p>
@@ -208,16 +199,10 @@ const Download = () => {
             <h1>Build in mod manager</h1>
             <p>You can easily download single mods to add to your instance</p>
           </div>
-          <img
-            src="https://cdn.assets-gdevs.com/modsManager.PNG"
-            className="layout"
-          />
+          <img src="https://cdn.assets-gdevs.com/modsManager.PNG" />
         </div>
         <div className="ImgFeature">
-          <img
-            src="https://cdn.assets-gdevs.com/javaSetup.png"
-            className="layout"
-          />
+          <img src="https://cdn.assets-gdevs.com/javaSetup.png" />
           <div>
             <h1>Auto java setup</h1>
             <p>
@@ -237,19 +222,13 @@ const Download = () => {
             Even a dollar can make a difference!
           </p>
           <a href="https://www.patreon.com/gorilladevs">
-            <img
-              src="https://cdn.assets-gdevs.com/patreonButton.png"
-              className="layout"
-            />
+            <img src="https://cdn.assets-gdevs.com/patreonButton.png" />
           </a>
         </div>
       </div>
       <div id="downloadContainer" className="downloadContainer">
         <div className="downloadInnerContainer">
-          <img
-            src="https://cdn.assets-gdevs.com/launcher-1.jpg"
-            className="layout"
-          />
+          <img src="https://cdn.assets-gdevs.com/launcher-1.jpg" />
           <div className="downloadButtons">
             <h1 className="title">Download GDLauncher Now!</h1>
             {os ? (
@@ -324,8 +303,10 @@ const Download = () => {
           font-size: 16px;
           line-height: 28px;
         }
+
         .firstView {
           position: relative;
+          top: 130px;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -338,7 +319,7 @@ const Download = () => {
           right: 0;
           top: 15%;
           z-index: 0;
-          width: 90%;
+          width: 70%;
         }
 
         .innerContainer {
@@ -360,7 +341,6 @@ const Download = () => {
         }
 
         .innerContainerText > h1 {
-          width: 400px;
           font-family: FF Mark W05;
           font-style: normal;
           font-weight: 900;
@@ -370,7 +350,6 @@ const Download = () => {
         }
 
         .innerContainerText > p {
-          width: 510px;
           font-family: FF Mark W05;
           font-style: normal;
           font-weight: 500;
@@ -389,7 +368,6 @@ const Download = () => {
         }
 
         .whyGd {
-          margin-top: 600px;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -535,8 +513,7 @@ const Download = () => {
         }
 
         .patreonContainer > div > h1 {
-          height: 42px;
-
+          text-align: center;
           font-family: FF Mark W05;
           font-style: normal;
           font-weight: 900;
@@ -545,8 +522,6 @@ const Download = () => {
         }
 
         .patreonContainer > div > p {
-          height: 56px;
-
           font-family: FF Mark W05;
           font-style: normal;
           font-weight: 500;
@@ -572,9 +547,52 @@ const Download = () => {
             flex-direction: column;
           }
 
-          .supportButtons > githubButton,
-          discordButton {
+          .firstView {
+            margin-bottom: 200px;
+          }
+
+          .innerContainerText h1 {
+            font-size: 60px;
+          }
+
+          .innerContainerText p {
+            font-size: 40px;
+          }
+
+          .isometricDesign {
+            display: none;
+          }
+
+          .whyGd > h1{
+            font-size: 30px;
+          }
+
+          .ImgFeature {
+            flex-direction: column;
+          }
+
+          .ImgFeature > img {
+            max-width: 300px;
+          }
+
+          .downloadInnerContainer > img {
+            display: none;
+          }
+
+          .downloadButtons {
             margin: 0;
+          }
+
+          .downloadButtons h1 {
+            font-size: 25px;
+          }
+
+          .patreonContainer > div > p {
+            width: 400px;
+          }
+
+          .patreonContainer > div > a > img {
+            width: 350px;
           }
         }
       `}</style>

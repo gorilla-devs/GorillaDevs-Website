@@ -36,11 +36,10 @@ html {
   width: 200px;
   height: 50px !important;
   padding: 0 !important;
-  margin: 0;
   z-index: 2;
   background: #333 !important;
   border-color: #333 !important;
-  margin-left: 20px !important;
+  margin-left: 20px;
 }
 
 .discordButton {
@@ -51,11 +50,20 @@ html {
   width: 200px;
   height: 50px !important;
   padding: 0 !important;
-  margin: 0;
   z-index: 2;
   background: #7289da !important;
   border-color: #7289da !important;
-  margin-left: 20px !important;
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 414px) {
+  .githubButton {
+    margin: 20px 0 00px 0 ;
+  }
+
+  .discordButton {
+    margin: 20px 0 00px 0;
+  }
 }
 
 a {
