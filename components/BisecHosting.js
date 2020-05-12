@@ -1,7 +1,7 @@
 import Link from "next/link";
 import theme from "../theme";
 const BisectHosting = ({ size, onClick, showPointerCursor }) => (
-  <a href="https://www.bisecthosting.com/">
+  <a href="https://bisecthosting.com/gdl">
     <svg
       onClick={onClick}
       viewBox="0 0 241.66 78.82"

@@ -76,195 +76,212 @@ const Download = () => {
       <div id="home" className="PartneredContainer">
         <h3>Partnered with:&nbsp;&nbsp;</h3>
         <BisectHosting showPointerCursor size={200} />
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;-25% off with our promo code: GDL </p>
       </div>
       <Navbar />
-      <div className="firstView">
-        {/* <img
+      <div className="mainContainer">
+        <div className="firstView">
+          {/* <img
           src="https://cdn.assets-gdevs.com/isometricDesign.png"
           className="isometricDesign"
         /> */}
-        <div className="innerContainer">
-          <div className="innerContainerText">
-            <h1>GDLauncher</h1>
-            <p>The future of minecraft launchers</p>
-          </div>
-          <div className="supportButtons">
-            <Button
-              type="primary"
-              href="#downloadContainer"
-              className="downloadButton"
-              style={{
-                color: theme.palette.text.primary,
-                cursor: "pointer",
-                background: theme.palette.primary.main,
-                borderColor: theme.palette.primary.main,
-              }}
-            >
-              <FontAwesomeIcon icon={faDownload} size="2x" />
-              &nbsp;Download Now!
-            </Button>
-            <Button
-              type="primary"
-              href="https://github.com/gorilla-devs/GDLauncher"
-              className="githubButton"
-            >
-              <FontAwesomeIcon
-                icon={faGithub}
-                size="2x"
-                style={{ color: theme.palette.text.primary, cursor: "pointer" }}
-              />
-              &nbsp;Github
-            </Button>
-            <Button
-              type="primary"
-              className="discordButton"
-              href="https://discord.gg/ZxRxPqn"
-            >
-              <FontAwesomeIcon
-                icon={faDiscord}
-                size="2x"
+          <div className="innerContainer">
+            <div className="innerContainerText">
+              <h1>GDLauncher</h1>
+              <p>The future of minecraft launchers</p>
+            </div>
+            <div className="supportButtons">
+              <Button
+                type="primary"
+                href="#downloadContainer"
+                className="downloadButton"
                 style={{
                   color: theme.palette.text.primary,
                   cursor: "pointer",
-                  background: "#7289DA",
+                  background: theme.palette.primary.main,
+                  borderColor: theme.palette.primary.main,
                 }}
-              />
-              &nbsp;Discord
-            </Button>
-          </div>
-        </div>
-      </div>
-      <div className="whyGd">
-        <h1>Why use GDLauncher?</h1>
-        <div className="whyGdPreview">
-          <div className="column">
-            <div className="rect">
-              <FontAwesomeIcon icon={faUser} size="4x" />
-              <h2>We Listen</h2>
-            </div>
-            <div className="rect">
-              <FontAwesomeIcon icon={faCode} size="4x" />
-              <h2>Open Source</h2>
-            </div>
-          </div>
-          <img
-            src="https://cdn.assets-gdevs.com/layout.png"
-            className="layout"
-          />
-          <div className="column">
-            <div className="rect">
-              <FontAwesomeIcon icon={faThumbsUp} size="4x" />
-              <h2>Easy to use</h2>
-            </div>
-            <div className="rect">
-              <FontAwesomeIcon icon={faTrophy} size="4x" />
-              <h2>User Friendly</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="Features">
-        <div className="ImgFeature">
-          <img src="https://cdn.assets-gdevs.com/launcher-1.jpg" />
-          <div>
-            <h1>Easily Manage And Create Instances</h1>
-            <p>
-              You can easily download vanilla, forge or fabric instances and add
-              mods to it.
-            </p>
-          </div>
-        </div>
-        <div className="ImgFeature ImgFeatureLeft">
-          <img src="https://cdn.assets-gdevs.com/modpacksBrowser.png" />
-          <div>
-            <h1>Directly Download CurseForge's Modpacks</h1>
-            <p>
-              From our launcher you can easily download curseforge's modpacks
-              and start to play!
-            </p>
-          </div>
-        </div>
-        <div className="ImgFeature">
-          <img src="https://cdn.assets-gdevs.com/instanceCreation.PNG" />
-          <div>
-            <h1>Support for Vanilla, Forge and Fabric</h1>
-            <p>
-              You can play Vanilla, forge and fabric directly from the launcher,
-              without needing to download something else.
-            </p>
-          </div>
-        </div>
-        <div className="ImgFeature ImgFeatureLeft">
-          <img src="https://cdn.assets-gdevs.com/modsManager.PNG" />
-          <div>
-            <h1>Build in mod manager</h1>
-            <p>You can easily download single mods to add to your instance.</p>
-          </div>
-        </div>
-        <div className="ImgFeature">
-          <img src="https://cdn.assets-gdevs.com/javaSetup.png" />
-          <div>
-            <h1>Auto java setup</h1>
-            <p>
-              You don't need to download java anymore, since we'll do it for
-              you!
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="patreonContainer">
-        <div>
-          <h1>Donate To Support GDLauncher</h1>
-          <p>
-            If you like GDLauncher, consider becoming a Patron to help it grow.
-            Even a dollar can make a difference!
-          </p>
-          <a href="https://www.patreon.com/gorilladevs">
-            <img src="https://cdn.assets-gdevs.com/patreonButton.png" />
-          </a>
-        </div>
-      </div>
-      <div id="downloadContainer" className="downloadContainer">
-        <div className="downloadInnerContainer">
-          <img src="https://cdn.assets-gdevs.com/launcher-1.jpg" />
-          <div className="downloadButtons">
-            <h1 className="title">Download GDLauncher Now!</h1>
-            {os ? (
-              downloadLauncherBasedOnOs(os)
-            ) : (
-              <Button type="primary" className="downloadButton">
-                Download
+              >
+                <FontAwesomeIcon icon={faDownload} size="2x" />
+                &nbsp;Download Now!
               </Button>
-            )}
-            <div className="icons">
-              <p>Available for:</p>
-              <FontAwesomeIcon
-                onClick={() => setOs("Win32")}
-                icon={faWindows}
-                size="2x"
-                style={{ color: theme.palette.text.primary, cursor: "pointer" }}
-              />
-              <FontAwesomeIcon
-                onClick={() => setOs("Darwin")}
-                icon={faApple}
-                size="2x"
-                style={{ color: theme.palette.text.primary, cursor: "pointer" }}
-              />
-              <FontAwesomeIcon
-                onClick={() => setOs("linux")}
-                icon={faLinux}
-                size="2x"
-                style={{ color: theme.palette.text.primary, cursor: "pointer" }}
-              />
+              <Button
+                type="primary"
+                href="https://github.com/gorilla-devs/GDLauncher"
+                className="githubButton"
+              >
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  size="2x"
+                  style={{
+                    color: theme.palette.text.primary,
+                    cursor: "pointer",
+                  }}
+                />
+                &nbsp;Github
+              </Button>
+              <Button
+                type="primary"
+                className="discordButton"
+                href="https://discord.gg/ZxRxPqn"
+              >
+                <FontAwesomeIcon
+                  icon={faDiscord}
+                  size="2x"
+                  style={{
+                    color: theme.palette.text.primary,
+                    cursor: "pointer",
+                    background: "#7289DA",
+                  }}
+                />
+                &nbsp;Discord
+              </Button>
             </div>
-            <div className="portableContainer">
-              <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win-portable.zip">
-                PortableWin
-              </a>
+          </div>
+        </div>
+        <div className="whyGd">
+          <h1>Why use GDLauncher?</h1>
+          <div className="whyGdPreview">
+            <div className="column">
+              <div className="rect">
+                <FontAwesomeIcon icon={faUser} size="4x" />
+                <h2>We Listen</h2>
+              </div>
+              <div className="rect">
+                <FontAwesomeIcon icon={faCode} size="4x" />
+                <h2>Open Source</h2>
+              </div>
+            </div>
+            <img
+              src="https://cdn.assets-gdevs.com/layout.png"
+              className="layout"
+            />
+            <div className="column">
+              <div className="rect">
+                <FontAwesomeIcon icon={faThumbsUp} size="4x" />
+                <h2>Easy to use</h2>
+              </div>
+              <div className="rect">
+                <FontAwesomeIcon icon={faTrophy} size="4x" />
+                <h2>User Friendly</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="Features">
+          <div className="ImgFeature">
+            <img src="https://cdn.assets-gdevs.com/launcher-1.jpg" />
+            <div>
+              <h1>Easily Manage And Create Instances</h1>
+              <p>
+                You can easily download vanilla, forge or fabric instances and
+                add mods to it.
+              </p>
+            </div>
+          </div>
+          <div className="ImgFeature ImgFeatureLeft">
+            <img src="https://cdn.assets-gdevs.com/modpacksBrowser.png" />
+            <div>
+              <h1>Directly Download CurseForge's Modpacks</h1>
+              <p>
+                From our launcher you can easily download curseforge's modpacks
+                and start to play!
+              </p>
+            </div>
+          </div>
+          <div className="ImgFeature">
+            <img src="https://cdn.assets-gdevs.com/instanceCreation.PNG" />
+            <div>
+              <h1>Support for Vanilla, Forge and Fabric</h1>
+              <p>
+                You can play Vanilla, forge and fabric directly from the
+                launcher, without needing to download something else.
+              </p>
+            </div>
+          </div>
+          <div className="ImgFeature ImgFeatureLeft">
+            <img src="https://cdn.assets-gdevs.com/modsManager.PNG" />
+            <div>
+              <h1>Build in mod manager</h1>
+              <p>
+                You can easily download single mods to add to your instance.
+              </p>
+            </div>
+          </div>
+          <div className="ImgFeature">
+            <img src="https://cdn.assets-gdevs.com/javaSetup.png" />
+            <div>
+              <h1>Auto java setup</h1>
+              <p>
+                You don't need to download java anymore, since we'll do it for
+                you!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="patreonContainer">
+          <div>
+            <h1>Donate To Support GDLauncher</h1>
+            <p>
+              If you like GDLauncher, consider becoming a Patron to help it
+              grow. Even a dollar can make a difference!
+            </p>
+            <a href="https://www.patreon.com/gorilladevs">
+              <img src="https://cdn.assets-gdevs.com/patreonButton.png" />
+            </a>
+          </div>
+        </div>
+        <div id="downloadContainer" className="downloadContainer">
+          <div className="downloadInnerContainer">
+            <img src="https://cdn.assets-gdevs.com/launcher-1.jpg" />
+            <div className="downloadButtons">
+              <h1 className="title">Download GDLauncher Now!</h1>
+              {os ? (
+                downloadLauncherBasedOnOs(os)
+              ) : (
+                <Button type="primary" className="downloadButton">
+                  Download
+                </Button>
+              )}
+              <div className="icons">
+                <p>Available for:</p>
+                <FontAwesomeIcon
+                  onClick={() => setOs("Win32")}
+                  icon={faWindows}
+                  size="2x"
+                  style={{
+                    color: theme.palette.text.primary,
+                    cursor: "pointer",
+                  }}
+                />
+                <FontAwesomeIcon
+                  onClick={() => setOs("Darwin")}
+                  icon={faApple}
+                  size="2x"
+                  style={{
+                    color: theme.palette.text.primary,
+                    cursor: "pointer",
+                  }}
+                />
+                <FontAwesomeIcon
+                  onClick={() => setOs("linux")}
+                  icon={faLinux}
+                  size="2x"
+                  style={{
+                    color: theme.palette.text.primary,
+                    cursor: "pointer",
+                  }}
+                />
+              </div>
+              <div className="portableContainer">
+                <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win-portable.zip">
+                  PortableWin
+                </a>
 
-              <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-portable.snap">
-                PortableLinux
-              </a>
+                <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-portable.snap">
+                  PortableLinux
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -279,6 +296,12 @@ const Download = () => {
           align-items: center;
           background: ${theme.palette.primary.dark};
           overflow-x: hidden;
+        }
+
+        .mainContainer {
+          margin-top: 130px;
+          width: 100%;
+          overflow: hidden;
         }
 
         .PartneredContainer {
@@ -302,9 +325,18 @@ const Download = () => {
           line-height: 28px;
         }
 
+        .PartneredContainer > p {
+          color: ${theme.palette.text.primary};
+          font-family: FF Mark W05;
+          font-style: normal;
+          font-weight: 900;
+          font-size: 12px;
+          line-height: 28px;
+          margin: 0;
+        }
+
         .firstView {
           position: relative;
-          top: 130px;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -536,7 +568,7 @@ const Download = () => {
           color: #5a7391;
         }
 
-        @media only screen and (max-width: 414px) {
+        @media screen and (max-width: 414px) {
           .supportButtons {
             flex-direction: column;
           }
