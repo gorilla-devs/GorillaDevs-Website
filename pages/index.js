@@ -289,7 +289,6 @@ const Download = () => {
 
       <style jsx>{`
         .container {
-          height: 700vh;
           width: 100%;
           display: flex;
           flex-direction: column;
