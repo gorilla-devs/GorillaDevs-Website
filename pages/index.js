@@ -567,7 +567,49 @@ const Download = () => {
           color: #5a7391;
         }
 
+        @media screen and (max-width: 768px) {
+          .ImgFeature {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .ImgFeature > div {
+            margin: 0;
+          }
+
+          .ImgFeature > div > h1 {
+            text-align: center;
+            font-size: 28px;
+          }
+
+          .ImgFeature > div > p {
+            max-width: 350px;
+            font-size: 22px;
+            text-align: center;
+          }
+
+          .ImgFeature > img {
+            max-width: 300px;
+          }
+
+          .downloadInnerContainer > img {
+            display: none;
+          }
+
+          .downloadButtons {
+            margin: 0;
+          }
+
+          .downloadButtons h1 {
+            font-size: 25px;
+          }
+        }
+
         @media screen and (max-width: 414px) {
+          .PartneredContainer > h3 {
+            display: none;
+          }
+
           .supportButtons {
             flex-direction: column;
           }
@@ -611,11 +653,12 @@ const Download = () => {
 
           .ImgFeature > div > h1 {
             text-align: center;
+            font-size: 28px;
           }
 
           .ImgFeature > div > p {
             max-width: 350px;
-            font-size: 25px;
+            font-size: 22px;
             text-align: center;
           }
 
@@ -636,11 +679,11 @@ const Download = () => {
           }
 
           .patreonContainer > div > p {
-            width: 400px;
+            width: 350px;
           }
 
           .patreonContainer > div > a > img {
-            width: 350px;
+            width: 300px;
           }
 
           ::-webkit-scrollbar {
