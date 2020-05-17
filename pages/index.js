@@ -474,7 +474,7 @@ const Download = () => {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: center;
+          align-items: start;
           width: 600px;
           padding: 20px;
           margin-left: 50px;
