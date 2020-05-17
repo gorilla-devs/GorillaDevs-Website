@@ -48,6 +48,11 @@ const NavBar = () => (
         font-size: 20px;
         line-height: 28px;
         color: #27ae60;
+        transition: all .2 ease-in-out;
+      }
+      
+      #download:hover {
+        filter: brightness(110%);
       }
 
       .logo {
@@ -57,6 +62,10 @@ const NavBar = () => (
 
       .button {
         margin: 10px;
+      }
+
+      .button:hover {
+        filter: brightness(110%);
       }
 
       a{

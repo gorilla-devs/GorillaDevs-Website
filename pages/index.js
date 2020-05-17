@@ -105,6 +105,12 @@ const Download = () => {
                 type="primary"
                 href="https://github.com/gorilla-devs/GDLauncher"
                 className="githubButton"
+                style={{
+                  color: theme.palette.text.primary,
+                  cursor: "pointer",
+                  background: "#333",
+                  borderColor: "#333",
+                }}
               >
                 <FontAwesomeIcon
                   icon={faGithub}
@@ -120,6 +126,12 @@ const Download = () => {
                 type="primary"
                 className="discordButton"
                 href="https://discord.gg/ZxRxPqn"
+                style={{
+                  color: theme.palette.text.primary,
+                  cursor: "pointer",
+                  background: "#7289da",
+                  borderColor: "#7289da",
+                }}
               >
                 <FontAwesomeIcon
                   icon={faDiscord}
@@ -127,7 +139,6 @@ const Download = () => {
                   style={{
                     color: theme.palette.text.primary,
                     cursor: "pointer",
-                    background: "#7289DA",
                   }}
                 />
                 &nbsp;Discord
