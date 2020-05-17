@@ -81,10 +81,6 @@ const Download = () => {
       <Navbar />
       <div className="mainContainer">
         <div className="firstView">
-          {/* <img
-          src="https://cdn.assets-gdevs.com/isometricDesign.png"
-          className="isometricDesign"
-        /> */}
           <div className="innerContainer">
             <div className="innerContainerText">
               <h1>GDLauncher</h1>
@@ -616,7 +612,12 @@ const Download = () => {
           }
 
           .whyGd > .whyGdPreview {
+            justify-content: center;
+          }
+
+          .whyGd > .whyGdPreview .column {
             display: none;
+            justify-content: center;
           }
         }
 
@@ -653,15 +654,17 @@ const Download = () => {
             display: none;
           }
 
-          .whyGd {
-            height: 75px;
-          }
-
           .whyGd > h1 {
-            font-size: 30px;
+            font-size: 23px;
+            width: 400px;
           }
 
           .whyGd > .whyGdPreview {
+            justify-content: center;
+            width: 70%;
+          }
+
+          .whyGd > .whyGdPreview .column {
             display: none;
           }
 
@@ -740,6 +743,60 @@ const Download = () => {
           ::-webkit-scrollbar-track {
             background-color: #050818;
             border-radius: 1px;
+          }
+
+          @media screen and (max-width: 320px) {
+            .ImgFeature > div {
+              margin: 0;
+              justify-content: center;
+              align-items: center;
+            }
+
+            .ImgFeature > div > h1 {
+              text-align: center;
+              font-size: 16px;
+              width: 300px;
+            }
+
+            .ImgFeature > div > p {
+              max-width: 350px;
+              font-size: 20px;
+              width: 300px;
+              text-align: center;
+            }
+
+            .ImgFeature > img {
+              max-width: 250px;
+            }
+
+            .PartneredContainer > p {
+              width: 150px;
+              text-align: center;
+            }
+
+            .innerContainerText > h1 {
+              font-size: 40px;
+            }
+
+            .innerContainerText > p {
+              font-size: 40px;
+            }
+
+            .patreonContainer > div > h1 {
+              font-size: 30px;
+            }
+
+            .patreonContainer > div > p {
+              width: 300px;
+            }
+
+            .patreonContainer > div > a > img {
+              width: 200px;
+            }
+
+            .downloadButtons > h1 {
+              font-size: 20px;
+            }
           }
         }
       `}</style>
