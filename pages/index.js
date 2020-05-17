@@ -572,7 +572,7 @@ const Download = () => {
           color: #5a7391;
         }
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1024px) {
           .PartneredContainer p {
             width: 220px;
           }
@@ -584,6 +584,8 @@ const Download = () => {
 
           .ImgFeature > div {
             margin: 0;
+            justify-content: center;
+            align-items: center;
           }
 
           .ImgFeature > div > h1 {
@@ -598,7 +600,7 @@ const Download = () => {
           }
 
           .ImgFeature > img {
-            max-width: 600px;
+            max-width: 400px;
           }
 
           .downloadInnerContainer > img {
@@ -611,6 +613,10 @@ const Download = () => {
 
           .downloadButtons h1 {
             font-size: 25px;
+          }
+
+          .whyGd > .whyGdPreview {
+            display: none;
           }
         }
 
@@ -666,6 +672,8 @@ const Download = () => {
 
           .ImgFeature > div {
             margin: 0;
+            justify-content: center;
+            align-items: center;
           }
 
           .ImgFeature > div > h1 {
