@@ -317,7 +317,7 @@ const Download = () => {
 
         .PartneredContainer > h3 {
           color: ${theme.palette.text.primary};
-          font-family: FF Mark W05;
+          font-family: Inter;
           font-style: normal;
           font-weight: 900;
           font-size: 16px;
@@ -326,12 +326,13 @@ const Download = () => {
 
         .PartneredContainer > p {
           color: ${theme.palette.text.primary};
-          font-family: FF Mark W05;
+          font-family: Inter;
           font-style: normal;
-          font-weight: 900;
+          font-weight: 300;
           font-size: 12px;
           line-height: 28px;
           margin: 0;
+          width: 220px;
         }
 
         .firstView {
@@ -362,7 +363,7 @@ const Download = () => {
         }
 
         .innerContainerText > h1 {
-          font-family: FF Mark W05;
+          font-family: Inter;
           font-style: normal;
           font-weight: 900;
           font-size: 72px;
@@ -371,7 +372,7 @@ const Download = () => {
         }
 
         .innerContainerText > p {
-          font-family: FF Mark W05;
+          font-family: Inter;
           font-style: normal;
           font-weight: 500;
           font-size: 48px;
@@ -399,7 +400,7 @@ const Download = () => {
 
         .whyGd > h1 {
           width: 675px;
-          font-family: FF Mark W05;
+          font-family: Inter;
           font-style: normal;
           font-weight: bold;
           font-size: 64px;
@@ -454,7 +455,7 @@ const Download = () => {
 
         .ImgFeature > div > h1 {
           width: 400px;
-          font-family: FF Mark W05;
+          font-family: Inter;
           font-style: normal;
           font-weight: bold !important;
           font-size: 30px;
@@ -462,7 +463,7 @@ const Download = () => {
         }
 
         .ImgFeature > div > p {
-          font-family: FF Mark W05;
+          font-family: Inter;
           font-style: normal;
           font-weight: 300;
           font-size: 30px;
@@ -527,7 +528,7 @@ const Download = () => {
           text-align: center;
           width: 459px;
 
-          font-family: FF Mark W05;
+          font-family: Inter;
           font-style: normal;
           font-weight: bold;
           font-size: 36px;
@@ -543,7 +544,7 @@ const Download = () => {
 
         .patreonContainer > div > h1 {
           text-align: center;
-          font-family: FF Mark W05;
+          font-family: Inter;
           font-style: normal;
           font-weight: 900;
           font-size: 36px;
@@ -551,9 +552,9 @@ const Download = () => {
         }
 
         .patreonContainer > div > p {
-          font-family: FF Mark W05;
+          font-family: Inter;
           font-style: normal;
-          font-weight: 500;
+          font-weight: 300;
           font-size: 24px;
           line-height: 28px;
           text-align: center;
@@ -572,6 +573,10 @@ const Download = () => {
         }
 
         @media screen and (max-width: 768px) {
+          .PartneredContainer p {
+            width: 220px;
+          }
+
           .ImgFeature {
             flex-direction: column;
             align-items: center;
@@ -612,6 +617,10 @@ const Download = () => {
         @media screen and (max-width: 414px) {
           .PartneredContainer > h3 {
             display: none;
+          }
+
+          .PartneredContainer > p {
+            width: 220px;
           }
 
           .supportButtons {
@@ -676,12 +685,16 @@ const Download = () => {
 
           .PartneredContainer > h3 {
             color: ${theme.palette.text.primary};
-            font-family: FF Mark W05;
+            font-family: Inter;
             font-style: normal;
             font-weight: 900;
             font-size: 16px;
             line-height: 28px;
             display: none;
+          }
+
+          .PartneredContainer > p {
+            width: 220px;
           }
 
           .downloadInnerContainer > img {
@@ -696,7 +709,7 @@ const Download = () => {
             font-size: 25px;
           }
 
-          .patreonContainer > p {
+          .patreonContainer p {
             width: 350px;
             font-size: 22px;
           }
