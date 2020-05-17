@@ -479,6 +479,10 @@ const Download = () => {
           margin-left: 50px;
         }
 
+        .ImgFeature > img {
+          width: 400px;
+        }
+
         .patreonContainer {
           width: 100%;
           height: 100vh;
@@ -614,6 +618,10 @@ const Download = () => {
             flex-direction: column;
           }
 
+          .ImgFeature > div > p {
+            font-size: 22px;
+          }
+
           .firstView {
             margin-bottom: 200px;
           }
@@ -666,6 +674,16 @@ const Download = () => {
             max-width: 300px;
           }
 
+          .PartneredContainer > h3 {
+            color: ${theme.palette.text.primary};
+            font-family: FF Mark W05;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 16px;
+            line-height: 28px;
+            display: none;
+          }
+
           .downloadInnerContainer > img {
             display: none;
           }
@@ -678,8 +696,9 @@ const Download = () => {
             font-size: 25px;
           }
 
-          .patreonContainer > div > p {
+          .patreonContainer > p {
             width: 350px;
+            font-size: 22px;
           }
 
           .patreonContainer > div > a > img {
