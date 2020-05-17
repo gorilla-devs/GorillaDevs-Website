@@ -481,7 +481,7 @@ const Download = () => {
         }
 
         .ImgFeature > img {
-          width: 400px;
+          width: 600px;
         }
 
         .patreonContainer {
@@ -598,7 +598,7 @@ const Download = () => {
           }
 
           .ImgFeature > img {
-            max-width: 300px;
+            max-width: 600px;
           }
 
           .downloadInnerContainer > img {
