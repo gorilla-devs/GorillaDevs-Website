@@ -579,7 +579,7 @@ const Download = () => {
           color: #5a7391;
         }
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1250px) {
           .PartneredContainer p {
             width: 220px;
           }
