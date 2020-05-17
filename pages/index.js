@@ -479,6 +479,10 @@ const Download = () => {
           margin-left: 50px;
         }
 
+        .ImgFeature > img {
+          width: 400px;
+        }
+
         .patreonContainer {
           width: 100%;
           height: 100vh;
@@ -572,6 +576,10 @@ const Download = () => {
             flex-direction: column;
           }
 
+          .ImgFeature > div > p {
+            font-size: 22px;
+          }
+
           .firstView {
             margin-bottom: 200px;
           }
@@ -611,16 +619,27 @@ const Download = () => {
 
           .ImgFeature > div > h1 {
             text-align: center;
+            font-size: 28px;
           }
 
           .ImgFeature > div > p {
             max-width: 350px;
-            font-size: 25px;
+            font-size: 22px;
             text-align: center;
           }
 
           .ImgFeature > img {
             max-width: 300px;
+          }
+
+          .PartneredContainer > h3 {
+            color: ${theme.palette.text.primary};
+            font-family: FF Mark W05;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 16px;
+            line-height: 28px;
+            display: none;
           }
 
           .downloadInnerContainer > img {
@@ -635,12 +654,13 @@ const Download = () => {
             font-size: 25px;
           }
 
-          .patreonContainer > div > p {
-            width: 400px;
+          .patreonContainer > p {
+            width: 350px;
+            font-size: 22px;
           }
 
           .patreonContainer > div > a > img {
-            width: 350px;
+            width: 300px;
           }
 
           ::-webkit-scrollbar {
