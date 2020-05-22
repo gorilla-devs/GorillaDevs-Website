@@ -42,7 +42,7 @@ const NavBar = () => (
       }
 
       
-      #homeButton {
+      #download {
         font-style: normal;
         font-weight: 900;
         font-size: 20px;
@@ -51,7 +51,7 @@ const NavBar = () => (
         transition: all .2 ease-in-out;
       }
       
-      #homeButton:hover {
+      #download:hover {
         filter: brightness(110%);
       }
 
