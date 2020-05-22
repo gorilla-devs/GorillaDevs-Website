@@ -91,7 +91,10 @@ const Download = () => {
           <div className="innerContainer">
             <div className="innerContainerText">
               <h1>GDLauncher</h1>
-              <p>The future of minecraft launchers</p>
+              <p>
+                GDLauncher is a simple, yet powerful Minecraft custom launcher
+                with a strong focus on the user experience
+              </p>
             </div>
             <div className="supportButtons">
               <Button
@@ -154,17 +157,17 @@ const Download = () => {
           </div>
         </div>
         <div className="Features">
-          <h1>Why use GDLauncher?</h1>
+          <h1>Main Features</h1>
           <div className="ImgFeature">
             <img
               src="https://cdn.assets-gdevs.com/launcher-1.webp"
               alt="launcher"
             />
             <div>
-              <h1>Easily Manage And Create Instances</h1>
+              <h1>Modern and easy to use UI</h1>
               <p>
-                You can easily download vanilla, forge or fabric instances and
-                add mods to it.
+                Our main focus is to provide a powerful launcher, but keeping
+                the UI clean and modern
               </p>
             </div>
           </div>
@@ -174,10 +177,10 @@ const Download = () => {
               alt="modpacksBrowser"
             />
             <div>
-              <h1>Directly Download CurseForge's Modpacks</h1>
+              <h1>Browse and Download CurseForge's Modpacks</h1>
               <p>
-                From our launcher you can easily download curseforge's modpacks
-                and start to play!
+                You'll be able to browse and download any modpack directly from
+                within the launcher!
               </p>
             </div>
           </div>
@@ -189,8 +192,8 @@ const Download = () => {
             <div>
               <h1>Support for Vanilla, Forge and Fabric</h1>
               <p>
-                You can play Vanilla, forge and fabric directly from the
-                launcher, without needing to download something else.
+                You can play vanilla, forge and fabric directly from the
+                launcher, without needing to download anything else.
               </p>
             </div>
           </div>
@@ -200,10 +203,8 @@ const Download = () => {
               alt="modsManager"
             />
             <div>
-              <h1>Build in mod manager</h1>
-              <p>
-                You can easily download single mods to add to your instance.
-              </p>
+              <h1>Built in mods manager</h1>
+              <p>You can easily download mods and keep them up to date</p>
             </div>
           </div>
           <div className="ImgFeature">
@@ -214,8 +215,9 @@ const Download = () => {
             <div>
               <h1>Auto java setup</h1>
               <p>
-                You don't need to download java anymore, since we'll do it for
-                you!
+                You don't need to have java installed on your pc. We will
+                automatically download the best java release to ensure complete
+                compatibility
               </p>
             </div>
           </div>
@@ -293,10 +295,6 @@ const Download = () => {
               <div className="portableContainer">
                 <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win-portable.zip">
                   PortableWin
-                </a>
-
-                <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-portable.snap">
-                  PortableLinux
                 </a>
               </div>
             </div>
@@ -392,9 +390,10 @@ const Download = () => {
           font-family: Inter;
           font-style: normal;
           font-weight: 500;
-          font-size: 48px;
+          font-size: 45px;
           line-height: 56px;
           text-align: center;
+          max-width: 1100px;
         }
 
         .supportButtons {
@@ -559,8 +558,8 @@ const Download = () => {
         .portableContainer {
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
-          margin: 0;
+          justify-content: center;
+          margin: 10px 0 0 0;
           width: 200px;
         }
 

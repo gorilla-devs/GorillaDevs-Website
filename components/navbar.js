@@ -15,9 +15,6 @@ const NavBar = () => (
             Home
           </div>
         </Link>
-        <a href="https://github.com/gorilla-devs/GDLauncher/wiki">
-          <div className="button">Guide</div>
-        </a>
         <a href="#downloadContainer">
           <div id="download" className="button">
             Download
