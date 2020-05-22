@@ -292,11 +292,6 @@ const Download = () => {
                   />
                 </Button>
               </div>
-              <div className="portableContainer">
-                <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win-portable.zip">
-                  PortableWin
-                </a>
-              </div>
             </div>
           </div>
         </div>
@@ -553,18 +548,6 @@ const Download = () => {
           font-size: 24px;
           line-height: 28px;
           text-align: center;
-        }
-
-        .portableContainer {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          margin: 10px 0 0 0;
-          width: 200px;
-        }
-
-        .portableContainer a {
-          color: #5a7391;
         }
 
         @media screen and (max-width: 1200px) {
