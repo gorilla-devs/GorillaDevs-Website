@@ -149,7 +149,7 @@ const Download = () => {
         <div className="whyGd">
           <h1>Why use GDLauncher?</h1>
           <div className="whyGdPreview">
-            <div className="column">
+            {/* <div className="column">
               <div className="rect">
                 <FontAwesomeIcon icon={faUser} size="4x" />
                 <h2>We Listen</h2>
@@ -158,12 +158,12 @@ const Download = () => {
                 <FontAwesomeIcon icon={faCode} size="4x" />
                 <h2>Open Source</h2>
               </div>
-            </div>
+            </div> */}
             <img
               src="https://cdn.assets-gdevs.com/layout.png"
               className="layout"
             />
-            <div className="column">
+            {/* <div className="column">
               <div className="rect">
                 <FontAwesomeIcon icon={faThumbsUp} size="4x" />
                 <h2>Easy to use</h2>
@@ -172,7 +172,7 @@ const Download = () => {
                 <FontAwesomeIcon icon={faTrophy} size="4x" />
                 <h2>User Friendly</h2>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="Features">
@@ -579,7 +579,7 @@ const Download = () => {
           color: #5a7391;
         }
 
-        @media screen and (max-width: 1250px) {
+        @media screen and (max-width: 1200px) {
           .PartneredContainer p {
             width: 220px;
           }
@@ -607,7 +607,7 @@ const Download = () => {
           }
 
           .ImgFeature > img {
-            max-width: 400px;
+            max-width: 300px;
           }
 
           .downloadInnerContainer > img {
@@ -632,7 +632,7 @@ const Download = () => {
           }
         }
 
-        @media screen and (max-width: 414px) {
+        @media screen and (max-width: 600px) {
           .PartneredContainer > h3 {
             display: none;
           }
