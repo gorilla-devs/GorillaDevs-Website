@@ -741,11 +741,15 @@ const Download = () => {
             border-radius: 1px;
           }
 
-          @media screen and (max-width: 320px) {
+          @media screen and (max-width: 376px) {
             .ImgFeature > div {
               margin: 0;
               justify-content: center;
               align-items: center;
+            }
+
+            .Features h1 {
+              font-size: 55px;
             }
 
             .ImgFeature > div > h1 {
