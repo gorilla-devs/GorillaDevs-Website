@@ -62,6 +62,7 @@ const NavBar = () => (
 
       .button {
         margin: 10px;
+        transition: all 0.2s ease-in-out;
       }
 
       .button:hover {

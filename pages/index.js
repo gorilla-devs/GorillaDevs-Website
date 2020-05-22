@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Head from "next/head";
 import { useEffect, useState } from "react";
 import { Button } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -20,50 +20,6 @@ import Navbar from "../components/navbar";
 import BisectHosting from "../components/BisecHosting";
 import theme from "../theme";
 
-const downloadLauncherBasedOnOs = (os) => {
-  console.log("os", os);
-  if (os === "Win32" || os === "Win16") {
-    console.log("OK");
-    return (
-      <Button
-        type="primary"
-        className="downloadButton"
-        style={{ display: "flex" }}
-        href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win-setup.exe"
-      >
-        Download for Windows
-      </Button>
-    );
-  } else if (
-    os === "Darwin" ||
-    os === "Mac68K" ||
-    os === "MacPPC" ||
-    os === "MacIntel"
-  ) {
-    return (
-      <Button
-        type="primary"
-        className="downloadButton"
-        href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-mac-setup.dmg"
-        style={{ display: "flex" }}
-      >
-        Download for MacOs
-      </Button>
-    );
-  } else if (os === "linux" || os === "Linux i686" || os === "Linux armv7l") {
-    return (
-      <Button
-        type="primary"
-        className="downloadButton"
-        href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-setup.AppImage"
-        style={{ display: "flex" }}
-      >
-        Download for Linux
-      </Button>
-    );
-  }
-};
-
 const Download = () => {
   const [os, setOs] = useState(null);
 
@@ -73,6 +29,10 @@ const Download = () => {
 
   return (
     <div className="container">
+      <Head>
+        <title>GDLauncher</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div id="home" className="PartneredContainer">
         <h3>Partnered with:&nbsp;&nbsp;</h3>
         <BisectHosting showPointerCursor size={200} />
@@ -98,7 +58,7 @@ const Download = () => {
                   borderColor: theme.palette.primary.main,
                 }}
               >
-                <FontAwesomeIcon icon={faDownload} size="2x" />
+                <FontAwesomeIcon icon={faDownload} size="3em" />
                 &nbsp;Download Now!
               </Button>
               <Button
@@ -550,6 +510,10 @@ const Download = () => {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+        }
+
+        .patreonContainer img {
+          max-width: 300px;
         }
 
         .patreonContainer > div > h1 {
