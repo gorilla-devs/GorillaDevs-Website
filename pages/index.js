@@ -358,7 +358,7 @@ const Download = () => {
           flex-direction: column;
           justify-content: center;
           width: 100%;
-          height: 100vh;
+          height: calc(100vh - 60px);
         }
 
         .innerContainer {
@@ -466,7 +466,7 @@ const Download = () => {
 
         .patreonContainer {
           width: 100%;
-          height: 100vh;
+          height: 50vh;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -478,7 +478,7 @@ const Download = () => {
 
         .downloadContainer {
           width: 100%;
-          height: 100vh;
+          height: 50vh;
           display: flex;
           flex-direction: column;
           justify-content: center;
