@@ -215,42 +215,52 @@ const Download = () => {
             <img src="https://cdn.assets-gdevs.com/launcher-1.jpg" />
             <div className="downloadButtons">
               <h1 className="title">Download GDLauncher Now!</h1>
-              {os ? (
-                downloadLauncherBasedOnOs(os)
-              ) : (
-                <Button type="primary" className="downloadButton">
-                  Download
+              <div className="buttons">
+                <Button
+                  type="primary"
+                  className="downloadButton"
+                  style={{ display: "flex" }}
+                  href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win-setup.exe"
+                >
+                  Download for Windows{" "}
+                  <FontAwesomeIcon
+                    icon={faWindows}
+                    style={{
+                      color: theme.palette.text.primary,
+                      marginLeft: 10,
+                    }}
+                  />
                 </Button>
-              )}
-              <div className="icons">
-                <p>Available for:</p>
-                <FontAwesomeIcon
-                  onClick={() => setOs("Win32")}
-                  icon={faWindows}
-                  size="2x"
-                  style={{
-                    color: theme.palette.text.primary,
-                    cursor: "pointer",
-                  }}
-                />
-                <FontAwesomeIcon
-                  onClick={() => setOs("Darwin")}
-                  icon={faApple}
-                  size="2x"
-                  style={{
-                    color: theme.palette.text.primary,
-                    cursor: "pointer",
-                  }}
-                />
-                <FontAwesomeIcon
-                  onClick={() => setOs("linux")}
-                  icon={faLinux}
-                  size="2x"
-                  style={{
-                    color: theme.palette.text.primary,
-                    cursor: "pointer",
-                  }}
-                />
+                <Button
+                  type="primary"
+                  className="downloadButton"
+                  href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-mac-setup.dmg"
+                  style={{ display: "flex" }}
+                >
+                  Download for MacOs
+                  <FontAwesomeIcon
+                    icon={faApple}
+                    style={{
+                      color: theme.palette.text.primary,
+                      marginLeft: 10,
+                    }}
+                  />
+                </Button>
+                <Button
+                  type="primary"
+                  className="downloadButton"
+                  href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-setup.AppImage"
+                  style={{ display: "flex" }}
+                >
+                  Download for Linux
+                  <FontAwesomeIcon
+                    icon={faLinux}
+                    style={{
+                      color: theme.palette.text.primary,
+                      marginLeft: 10,
+                    }}
+                  />
+                </Button>
               </div>
               <div className="portableContainer">
                 <a href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win-portable.zip">
@@ -505,7 +515,15 @@ const Download = () => {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          margin-left: 40px;
+          margin-left: 70px;
+        }
+
+        .downloadButtons > .buttons {
+          margin-top: 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 180px;
         }
 
         .downloadButtons > .icons {
@@ -741,7 +759,7 @@ const Download = () => {
             border-radius: 1px;
           }
 
-          @media screen and (max-width: 376px) {
+          @media screen and (max-width: 414px) {
             .ImgFeature > div {
               margin: 0;
               justify-content: center;
