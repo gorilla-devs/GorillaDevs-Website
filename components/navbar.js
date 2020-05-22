@@ -6,12 +6,12 @@ const NavBar = () => (
     <div className="navBar">
       <img
         alt="logo"
-        src="https://cdn.assets-gdevs.com/gdLogo.png"
+        src="https://cdn.assets-gdevs.com/gdLogo.webp"
         className="logo"
       />
       <div className="buttons">
         <Link href="/">
-          <div className="button" id="home">
+          <div className="button" id="homeButton">
             Home
           </div>
         </Link>
@@ -42,7 +42,7 @@ const NavBar = () => (
       }
 
       
-      #download {
+      #homeButton {
         font-style: normal;
         font-weight: 900;
         font-size: 20px;
@@ -51,7 +51,7 @@ const NavBar = () => (
         transition: all .2 ease-in-out;
       }
       
-      #download:hover {
+      #homeButton:hover {
         filter: brightness(110%);
       }
 

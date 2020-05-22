@@ -68,7 +68,7 @@ const Download = () => {
       </div>
       <img
         alt="launcher"
-        src="https://cdn.assets-gdevs.com/launcher-1.jpg"
+        src="https://cdn.assets-gdevs.com/launcher-1.webp"
         className="launcher1"
       />
       <div className="gradient">

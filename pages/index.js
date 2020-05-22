@@ -169,7 +169,10 @@ const Download = () => {
         <div className="Features">
           <h1>Why use GDLauncher?</h1>
           <div className="ImgFeature">
-            <img src="https://cdn.assets-gdevs.com/launcher-1.jpg" />
+            <img
+              src="https://cdn.assets-gdevs.com/launcher-1.webp"
+              alt="launcher"
+            />
             <div>
               <h1>Easily Manage And Create Instances</h1>
               <p>
@@ -179,7 +182,10 @@ const Download = () => {
             </div>
           </div>
           <div className="ImgFeature ImgFeatureLeft">
-            <img src="https://cdn.assets-gdevs.com/modpacksBrowser.png" />
+            <img
+              src="https://cdn.assets-gdevs.com/modpacksBrowser.webp"
+              alt="modpacksBrowser"
+            />
             <div>
               <h1>Directly Download CurseForge's Modpacks</h1>
               <p>
@@ -189,7 +195,10 @@ const Download = () => {
             </div>
           </div>
           <div className="ImgFeature">
-            <img src="https://cdn.assets-gdevs.com/instanceCreation.PNG" />
+            <img
+              src="https://cdn.assets-gdevs.com/instanceCreation.webp"
+              alt="instanceCreation"
+            />
             <div>
               <h1>Support for Vanilla, Forge and Fabric</h1>
               <p>
@@ -199,7 +208,10 @@ const Download = () => {
             </div>
           </div>
           <div className="ImgFeature ImgFeatureLeft">
-            <img src="https://cdn.assets-gdevs.com/modsManager.PNG" />
+            <img
+              src="https://cdn.assets-gdevs.com/modsManager.webp"
+              alt="modsManager"
+            />
             <div>
               <h1>Build in mod manager</h1>
               <p>
@@ -208,7 +220,10 @@ const Download = () => {
             </div>
           </div>
           <div className="ImgFeature">
-            <img src="https://cdn.assets-gdevs.com/javaSetup.png" />
+            <img
+              src="https://cdn.assets-gdevs.com/javaSetup.webp"
+              alt="javaSetup"
+            />
             <div>
               <h1>Auto java setup</h1>
               <p>
@@ -226,13 +241,19 @@ const Download = () => {
               grow. Even a dollar can make a difference!
             </p>
             <a href="https://www.patreon.com/gorilladevs">
-              <img src="https://cdn.assets-gdevs.com/patreonButton.png" />
+              <img
+                src="https://cdn.assets-gdevs.com/patreonButton.png"
+                alt="patreon"
+              />
             </a>
           </div>
         </div>
         <div id="downloadContainer" className="downloadContainer">
           <div className="downloadInnerContainer">
-            <img src="https://cdn.assets-gdevs.com/launcher-1.jpg" />
+            <img
+              src="https://cdn.assets-gdevs.com/launcher-1.webp"
+              alt="launcher"
+            />
             <div className="downloadButtons">
               <h1 className="title">Download GDLauncher Now!</h1>
               <div className="buttons">
@@ -396,52 +417,6 @@ const Download = () => {
           align-items: center;
           z-index: 2;
           margin-bottom: 30px;
-        }
-
-        .whyGd {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          height: 100vh;
-        }
-
-        .whyGd > h1 {
-          width: 675px;
-          font-family: Inter;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 64px;
-          line-height: 75px;
-          text-align: center;
-          margin-bottom: 50px;
-          color: ${theme.palette.text.primary};
-        }
-
-        .whyGdPreview {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          width: 1300px;
-        }
-
-        .whyGdPreview > .column {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-        }
-
-        .rect {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 176px;
-          height: 140px;
-          border-radius: 5px;
-          background: ${theme.palette.grey[700]};
-          color: ${theme.palette.text.primary};
         }
 
         .Features {
@@ -648,15 +623,6 @@ const Download = () => {
           .downloadButtons h1 {
             font-size: 25px;
           }
-
-          .whyGd > .whyGdPreview {
-            justify-content: center;
-          }
-
-          .whyGd > .whyGdPreview .column {
-            display: none;
-            justify-content: center;
-          }
         }
 
         @media screen and (max-width: 600px) {
@@ -686,24 +652,6 @@ const Download = () => {
 
           .innerContainerText p {
             font-size: 40px;
-          }
-
-          .isometricDesign {
-            display: none;
-          }
-
-          .whyGd > h1 {
-            font-size: 23px;
-            width: 400px;
-          }
-
-          .whyGd > .whyGdPreview {
-            justify-content: center;
-            width: 70%;
-          }
-
-          .whyGd > .whyGdPreview .column {
-            display: none;
           }
 
           .ImgFeature {
