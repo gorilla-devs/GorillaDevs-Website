@@ -146,36 +146,8 @@ const Download = () => {
             </div>
           </div>
         </div>
-        <div className="whyGd">
-          <h1>Why use GDLauncher?</h1>
-          <div className="whyGdPreview">
-            <div className="column">
-              <div className="rect">
-                <FontAwesomeIcon icon={faUser} size="4x" />
-                <h2>We Listen</h2>
-              </div>
-              <div className="rect">
-                <FontAwesomeIcon icon={faCode} size="4x" />
-                <h2>Open Source</h2>
-              </div>
-            </div>
-            <img
-              src="https://cdn.assets-gdevs.com/layout.png"
-              className="layout"
-            />
-            <div className="column">
-              <div className="rect">
-                <FontAwesomeIcon icon={faThumbsUp} size="4x" />
-                <h2>Easy to use</h2>
-              </div>
-              <div className="rect">
-                <FontAwesomeIcon icon={faTrophy} size="4x" />
-                <h2>User Friendly</h2>
-              </div>
-            </div>
-          </div>
-        </div>
         <div className="Features">
+          <h1>Why use GDLauncher?</h1>
           <div className="ImgFeature">
             <img src="https://cdn.assets-gdevs.com/launcher-1.jpg" />
             <div>
@@ -448,6 +420,12 @@ const Download = () => {
           justify-content: center;
           align-items: center;
         }
+        .Features h1 {
+          width: 100%;
+          text-align: center;
+          font-size: 60px;
+          font-weight: 700;
+        }
 
         .ImgFeature {
           display: flex;
@@ -462,6 +440,9 @@ const Download = () => {
 
         .ImgFeature > div > h1 {
           width: 400px;
+          font-family: Inter;
+          width: 100%;
+          text-align: start;
           font-family: Inter;
           font-style: normal;
           font-weight: bold !important;
@@ -497,6 +478,10 @@ const Download = () => {
           display: flex;
           justify-content: center;
           align-items: center;
+        }
+
+        .patreonContainer p {
+          max-width: 600px;
         }
 
         .downloadContainer {
