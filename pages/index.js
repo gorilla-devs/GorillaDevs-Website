@@ -9,24 +9,12 @@ import {
   faGithub,
   faDiscord,
 } from "@fortawesome/free-brands-svg-icons";
-import {
-  faDownload,
-  faCode,
-  faUser,
-  faThumbsUp,
-  faTrophy,
-} from "@fortawesome/free-solid-svg-icons";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import Navbar from "../components/navbar";
 import BisectHosting from "../components/BisecHosting";
 import theme from "../theme";
 
 const Download = () => {
-  const [os, setOs] = useState(null);
-
-  useEffect(() => {
-    if (window.navigator.platform) setOs(window.navigator.platform);
-  }, []);
-
   return (
     <div className="container">
       <Head>
