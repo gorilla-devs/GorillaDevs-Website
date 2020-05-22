@@ -30,7 +30,45 @@ const Download = () => {
   return (
     <div className="container">
       <Head>
-        <title>GDLauncher</title>
+        <title>GDLauncher - A Custom Minecraft Launcher</title>
+        <meta
+          name="description"
+          content="GDLauncher is a simple, yet powerful Minecraft custom launcher with a strong focus on the user experience"
+        />
+
+        {/* <!-- Primary Meta Tags --> */}
+        <meta name="title" content="GDLauncher - A Custom Minecraft Launcher" />
+        <meta
+          name="description"
+          content="GDLauncher is a simple, yet powerful Minecraft custom launcher with a strong focus on the user experience"
+        />
+
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://gdevs.io/" />
+        <meta
+          property="og:title"
+          content="GDLauncher - A Custom Minecraft Launcher"
+        />
+        <meta
+          property="og:description"
+          content="GDLauncher is a simple, yet powerful Minecraft custom launcher with a strong focus on the user experience"
+        />
+        <meta property="og:image" content="/previewGD.png" />
+
+        {/* <!-- Twitter --> */}
+        <meta property="twitter:card" content="/previewGD.png" />
+        <meta property="twitter:url" content="http://gdevs.io/" />
+        <meta
+          property="twitter:title"
+          content="GDLauncher - A Custom Minecraft Launcher"
+        />
+        <meta
+          property="twitter:description"
+          content="GDLauncher is a simple, yet powerful Minecraft custom launcher with a strong focus on the user experience"
+        />
+        <meta property="twitter:image" content="/previewGD.png" />
+
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta charSet="utf-8" />
         <link
