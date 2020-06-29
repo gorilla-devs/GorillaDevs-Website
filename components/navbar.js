@@ -71,7 +71,7 @@ const NavBar = () => (
       }
 
       .buttons {
-        width: 400px;
+        width: 300px;
         display: flex;
         flex-direction: row;
         justify-content: space-around;

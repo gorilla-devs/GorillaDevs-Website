@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Button } from "antd";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinux,
@@ -14,6 +15,7 @@ import BisectHosting from "../components/BisecHosting";
 import theme from "../theme";
 
 const Download = () => {
+  const [switchLinuxVersions, setSwitchLinuxVersions] = useState();
   return (
     <div className="container">
       <Head>
@@ -279,8 +281,8 @@ const Download = () => {
                 <Button
                   type="primary"
                   className="downloadButton"
-                  href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-setup.AppImage"
                   style={{ display: "flex" }}
+                  onClick={() => setSwitchLinuxVersions(!switchLinuxVersions)}
                 >
                   Download for Linux
                   <FontAwesomeIcon
@@ -292,6 +294,47 @@ const Download = () => {
                   />
                 </Button>
               </div>
+
+              {switchLinuxVersions && (
+                <div className="linuxVersions">
+                  <div>
+                    <Button
+                      type="primary"
+                      className="linuxVersionsButton"
+                      href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-setup.AppImage"
+                      style={{ display: "flex" }}
+                    >
+                      .AppImage
+                    </Button>
+                    <Button
+                      type="primary"
+                      className="linuxVersionsButton"
+                      href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-setup.deb"
+                      style={{ display: "flex" }}
+                    >
+                      .deb
+                    </Button>
+                  </div>
+                  <div>
+                    <Button
+                      type="primary"
+                      className="linuxVersionsButton"
+                      href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-portable.snap"
+                      style={{ display: "flex" }}
+                    >
+                      .snap
+                    </Button>
+                    <Button
+                      type="primary"
+                      className="linuxVersionsButton"
+                      href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-setup.rpm"
+                      style={{ display: "flex" }}
+                    >
+                      .rpm
+                    </Button>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -592,6 +635,40 @@ const Download = () => {
           .downloadButtons h1 {
             font-size: 25px;
           }
+        }
+
+        .linuxVersions {
+          margin-top: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+        }
+
+        .linuxVersions div {
+          margin-top: 10px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+        }
+
+        .linuxVersions div {
+          margin-top: 10px;
+          width: 200px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+        }
+
+        .linuxVersionsButton{
+          width: 50px;
+          height 50px;
+        }
+
+        .linuxVersionsButton:nth-child(2) {
+          margin: 0 10px;
         }
 
         @media screen and (max-width: 600px) {
