@@ -1,205 +1,843 @@
 import Head from "next/head";
 import { Button } from "antd";
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLinux,
+  faWindows,
+  faApple,
+  faGithub,
+  faDiscord,
+} from "@fortawesome/free-brands-svg-icons";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import Navbar from "../components/navbar";
+import BisectHosting from "../components/BisecHosting";
+import theme from "../theme";
 
-const Home = () => (
-  <div className="container">
-    <Head>
-      <title>Create Next App</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+const Download = () => {
+  const [switchLinuxVersions, setSwitchLinuxVersions] = useState();
+  return (
+    <div className="container">
+      <Head>
+        <title>GDLauncher - A Custom Minecraft Launcher</title>
+        <meta
+          name="description"
+          content="GDLauncher is a simple, yet powerful Minecraft custom launcher with a strong focus on the user experience"
+        />
 
-    <main>
-      <h1 className="title">
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
+        {/* <!-- Primary Meta Tags --> */}
+        <meta name="title" content="GDLauncher - A Custom Minecraft Launcher" />
+        <meta
+          name="description"
+          content="GDLauncher is a simple, yet powerful Minecraft custom launcher with a strong focus on the user experience"
+        />
 
-      <p className="description">
-        Get started by editing <code>pages/index.js</code>
-        <Button type="primary">Test</Button>
-      </p>
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://gdevs.io/" />
+        <meta
+          property="og:title"
+          content="GDLauncher - A Custom Minecraft Launcher"
+        />
+        <meta
+          property="og:description"
+          content="GDLauncher is a simple, yet powerful Minecraft custom launcher with a strong focus on the user experience"
+        />
+        <meta property="og:image" content="/previewGD.png" />
 
-      <div className="grid">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+        {/* <!-- Twitter --> */}
+        <meta property="twitter:card" content="/previewGD.png" />
+        <meta property="twitter:url" content="http://gdevs.io/" />
+        <meta
+          property="twitter:title"
+          content="GDLauncher - A Custom Minecraft Launcher"
+        />
+        <meta
+          property="twitter:description"
+          content="GDLauncher is a simple, yet powerful Minecraft custom launcher with a strong focus on the user experience"
+        />
+        <meta property="twitter:image" content="/previewGD.png" />
 
-        <a href="https://nextjs.org/learn" className="card">
-          <h3>Learn &rarr;</h3>
-          <p>Learn about Next.js in an interactive course with quizzes!</p>
-        </a>
-
-        <a
-          href="https://github.com/zeit/next.js/tree/master/examples"
-          className="card"
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Discover and deploy boilerplate example Next.js projects.</p>
-        </a>
-
-        <a
-          href="https://zeit.co/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          className="card"
-        >
-          <h3>Deploy &rarr;</h3>
-          <p>
-            Instantly deploy your Next.js site to a public URL with ZEIT Now.
-          </p>
-        </a>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta charSet="utf-8" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff"></meta>
+      </Head>
+      <div id="home" className="PartneredContainer">
+        <h3>Partnered with:&nbsp;&nbsp;</h3>
+        <BisectHosting showPointerCursor size={200} />
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;-25% off with our promo code: GDL </p>
       </div>
-    </main>
+      <Navbar />
+      <div className="mainContainer">
+        <div className="firstView">
+          <div className="innerContainer">
+            <div className="innerContainerText">
+              <h1>GDLauncher</h1>
+              <p>
+                GDLauncher is a simple, yet powerful Minecraft custom launcher
+                with a strong focus on the user experience
+              </p>
+            </div>
+            <div className="supportButtons">
+              <Button
+                type="primary"
+                href="#downloadContainer"
+                className="downloadButton"
+                style={{
+                  color: theme.palette.text.primary,
+                  cursor: "pointer",
+                  background: theme.palette.primary.main,
+                  borderColor: theme.palette.primary.main,
+                }}
+              >
+                <FontAwesomeIcon icon={faDownload} size="3em" />
+                &nbsp;Download Now!
+              </Button>
+              <Button
+                type="primary"
+                href="https://github.com/gorilla-devs/GDLauncher"
+                className="githubButton"
+                style={{
+                  color: theme.palette.text.primary,
+                  cursor: "pointer",
+                  background: "#333",
+                  borderColor: "#333",
+                }}
+              >
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  size="2x"
+                  style={{
+                    color: theme.palette.text.primary,
+                    cursor: "pointer",
+                  }}
+                />
+                &nbsp;Github
+              </Button>
+              <Button
+                type="primary"
+                className="discordButton"
+                href="https://discord.gg/ZxRxPqn"
+                style={{
+                  color: theme.palette.text.primary,
+                  cursor: "pointer",
+                  background: "#7289da",
+                  borderColor: "#7289da",
+                }}
+              >
+                <FontAwesomeIcon
+                  icon={faDiscord}
+                  size="2x"
+                  style={{
+                    color: theme.palette.text.primary,
+                    cursor: "pointer",
+                  }}
+                />
+                &nbsp;Discord
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="Features">
+          <h1>Main Features</h1>
+          <div className="ImgFeature">
+            <img
+              src="https://cdn.assets-gdevs.com/launcher-1.webp"
+              alt="launcher"
+            />
+            <div>
+              <h1>Modern and easy to use UI</h1>
+              <p>
+                Our main focus is to provide a powerful launcher, but keeping
+                the UI clean and modern
+              </p>
+            </div>
+          </div>
+          <div className="ImgFeature ImgFeatureLeft">
+            <img
+              src="https://cdn.assets-gdevs.com/modpacksBrowser.webp"
+              alt="modpacksBrowser"
+            />
+            <div>
+              <h1>Browse and Download CurseForge's Modpacks</h1>
+              <p>
+                You'll be able to browse and download any modpack directly from
+                within the launcher!
+              </p>
+            </div>
+          </div>
+          <div className="ImgFeature">
+            <img
+              src="https://cdn.assets-gdevs.com/instanceCreation.webp"
+              alt="instanceCreation"
+            />
+            <div>
+              <h1>Support for Vanilla, Forge and Fabric</h1>
+              <p>
+                You can play vanilla, forge and fabric directly from the
+                launcher, without needing to download anything else.
+              </p>
+            </div>
+          </div>
+          <div className="ImgFeature ImgFeatureLeft">
+            <img
+              src="https://cdn.assets-gdevs.com/modsManager.webp"
+              alt="modsManager"
+            />
+            <div>
+              <h1>Built in mods manager</h1>
+              <p>You can easily download mods and keep them up to date</p>
+            </div>
+          </div>
+          <div className="ImgFeature">
+            <img
+              src="https://cdn.assets-gdevs.com/javaSetup.webp"
+              alt="javaSetup"
+            />
+            <div>
+              <h1>Auto java setup</h1>
+              <p>
+                You don't need to have java installed on your pc. We will
+                automatically download the best java release to ensure complete
+                compatibility
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="patreonContainer">
+          <div>
+            <h1>Donate To Support GDLauncher</h1>
+            <p>
+              If you like GDLauncher, consider becoming a Patron to help it
+              grow. Even a dollar can make a difference!
+            </p>
+            <a href="https://www.patreon.com/gorilladevs">
+              <img
+                src="https://cdn.assets-gdevs.com/patreonButton.png"
+                alt="patreon"
+              />
+            </a>
+          </div>
+        </div>
+        <div id="downloadContainer" className="downloadContainer">
+          <div className="downloadInnerContainer">
+            <img
+              src="https://cdn.assets-gdevs.com/launcher-1.webp"
+              alt="launcher"
+            />
+            <div className="downloadButtons">
+              <h1 className="title">Download GDLauncher Now!</h1>
+              <div className="buttons">
+                <Button
+                  type="primary"
+                  className="downloadButton"
+                  style={{ display: "flex" }}
+                  href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-win-setup.exe"
+                >
+                  Download for Windows{" "}
+                  <FontAwesomeIcon
+                    icon={faWindows}
+                    style={{
+                      color: theme.palette.text.primary,
+                      marginLeft: 10,
+                    }}
+                  />
+                </Button>
+                <Button
+                  type="primary"
+                  className="downloadButton"
+                  href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-mac-setup.dmg"
+                  style={{ display: "flex" }}
+                >
+                  Download for MacOs
+                  <FontAwesomeIcon
+                    icon={faApple}
+                    style={{
+                      color: theme.palette.text.primary,
+                      marginLeft: 10,
+                    }}
+                  />
+                </Button>
+                <Button
+                  type="primary"
+                  className="downloadButton"
+                  style={{ display: "flex" }}
+                  onClick={() => setSwitchLinuxVersions(!switchLinuxVersions)}
+                >
+                  Download for Linux
+                  <FontAwesomeIcon
+                    icon={faLinux}
+                    style={{
+                      color: theme.palette.text.primary,
+                      marginLeft: 10,
+                    }}
+                  />
+                </Button>
+              </div>
 
-    <footer>
-      <a
-        href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by <img src="/zeit.svg" alt="ZEIT Logo" />
-      </a>
-    </footer>
+              {switchLinuxVersions && (
+                <div className="linuxVersions">
+                  <div>
+                    <Button
+                      type="primary"
+                      className="linuxVersionsButton"
+                      href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-setup.AppImage"
+                      style={{ display: "flex" }}
+                    >
+                      .AppImage
+                    </Button>
+                    <Button
+                      type="primary"
+                      className="linuxVersionsButton"
+                      href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-setup.deb"
+                      style={{ display: "flex" }}
+                    >
+                      .deb
+                    </Button>
+                  </div>
+                  <div>
+                    <Button
+                      type="primary"
+                      className="linuxVersionsButton"
+                      href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-portable.snap"
+                      style={{ display: "flex" }}
+                    >
+                      .snap
+                    </Button>
+                    <Button
+                      type="primary"
+                      className="linuxVersionsButton"
+                      href="https://github.com/gorilla-devs/GDLauncher-Releases/releases/latest/download/GDLauncher-linux-setup.rpm"
+                      style={{ display: "flex" }}
+                    >
+                      .rpm
+                    </Button>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <style jsx>{`
-      .container {
-        min-height: 100vh;
-        padding: 0 0.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      main {
-        padding: 5rem 0;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      footer {
-        width: 100%;
-        height: 100px;
-        border-top: 1px solid #eaeaea;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      footer img {
-        margin-left: 0.5rem;
-      }
-
-      footer a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .title a {
-        color: #0070f3;
-        text-decoration: none;
-      }
-
-      .title a:hover,
-      .title a:focus,
-      .title a:active {
-        text-decoration: underline;
-      }
-
-      .title {
-        margin: 0;
-        line-height: 1.15;
-        font-size: 4rem;
-      }
-
-      .title,
-      .description {
-        text-align: center;
-      }
-
-      .description {
-        line-height: 1.5;
-        font-size: 1.5rem;
-      }
-
-      code {
-        background: #fafafa;
-        border-radius: 5px;
-        padding: 0.75rem;
-        font-size: 1.1rem;
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-      }
-
-      .grid {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        max-width: 800px;
-        margin-top: 3rem;
-      }
-
-      .card {
-        margin: 1rem;
-        flex-basis: 45%;
-        padding: 1.5rem;
-        text-align: left;
-        color: inherit;
-        text-decoration: none;
-        border: 1px solid #eaeaea;
-        border-radius: 10px;
-        transition: color 0.15s ease, border-color 0.15s ease;
-      }
-
-      .card:hover,
-      .card:focus,
-      .card:active {
-        color: #0070f3;
-        border-color: #0070f3;
-      }
-
-      .card h3 {
-        margin: 0 0 1rem 0;
-        font-size: 1.5rem;
-      }
-
-      .card p {
-        margin: 0;
-        font-size: 1.25rem;
-        line-height: 1.5;
-      }
-
-      @media (max-width: 600px) {
-        .grid {
+      <style jsx>{`
+        .container {
           width: 100%;
+          display: flex;
           flex-direction: column;
+          align-items: center;
+          background: ${theme.palette.primary.dark};
+          overflow-x: hidden;
         }
-      }
-    `}</style>
 
-    <style jsx global>{`
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-      }
+        .mainContainer {
+          margin-top: 130px;
+          width: 100%;
+          overflow: hidden;
+        }
 
-      * {
-        box-sizing: border-box;
-      }
-    `}</style>
-  </div>
-);
+        .PartneredContainer {
+          width: 100%;
+          display: flex;
+          padding: 5px;
+          position: fixed;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 4;
+          background: ${theme.palette.grey[800]};
+        }
 
-export default Home;
+        .PartneredContainer > h3 {
+          color: ${theme.palette.text.primary};
+          font-family: Inter;
+          font-style: normal;
+          font-weight: 900;
+          font-size: 16px;
+          line-height: 28px;
+        }
+
+        .PartneredContainer > p {
+          color: ${theme.palette.text.primary};
+          font-family: Inter;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 12px;
+          line-height: 28px;
+          margin: 0;
+          width: 220px;
+        }
+
+        .firstView {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
+          height: calc(100vh - 60px);
+        }
+
+        .innerContainer {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 1;
+        }
+
+        .innerContainerText {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          color: ${theme.palette.text.primary};
+        }
+
+        .innerContainerText > h1 {
+          font-family: Inter;
+          font-style: normal;
+          font-weight: 900;
+          font-size: 72px;
+          line-height: 84px;
+          color: ${theme.palette.text.primary};
+        }
+
+        .innerContainerText > p {
+          font-family: Inter;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 45px;
+          line-height: 56px;
+          text-align: center;
+          max-width: 1100px;
+        }
+
+        .supportButtons {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          z-index: 2;
+          margin-bottom: 30px;
+        }
+
+        .Features {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .Features h1 {
+          width: 100%;
+          text-align: center;
+          font-size: 60px;
+          font-weight: 700;
+        }
+
+        .ImgFeature {
+          display: flex;
+          justify-content: space-between;
+          width: 70%;
+          margin: 50px 0;
+        }
+
+        .ImgFeatureLeft {
+          flex-direction: row-reverse;
+        }
+
+        .ImgFeature > div > h1 {
+          width: 400px;
+          font-family: Inter;
+          width: 100%;
+          text-align: start;
+          font-family: Inter;
+          font-style: normal;
+          font-weight: bold !important;
+          font-size: 30px;
+          line-height: 42px;
+        }
+
+        .ImgFeature > div > p {
+          font-family: Inter;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 30px;
+          line-height: 42px;
+        }
+
+        .ImgFeature > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: start;
+          width: 600px;
+          padding: 20px;
+          margin-left: 50px;
+        }
+
+        .ImgFeature > img {
+          width: 600px;
+        }
+
+        .patreonContainer {
+          width: 100%;
+          height: 50vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .patreonContainer p {
+          max-width: 600px;
+        }
+
+        .downloadContainer {
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .downloadInnerContainer {
+          width: 70%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .downloadButtons {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-left: 70px;
+        }
+
+        .downloadButtons > .buttons {
+          margin-top: 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 180px;
+        }
+
+        .downloadButtons > .icons {
+          margin-top: 15px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 200px;
+        }
+
+        .downloadButtons > h1 {
+          text-align: center;
+          width: 459px;
+
+          font-family: Inter;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 36px;
+          line-height: 42px;
+        }
+
+        .patreonContainer > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .patreonContainer img {
+          max-width: 300px;
+        }
+
+        .patreonContainer > div > h1 {
+          text-align: center;
+          font-family: Inter;
+          font-style: normal;
+          font-weight: 900;
+          font-size: 36px;
+          line-height: 42px;
+        }
+
+        .patreonContainer > div > p {
+          font-family: Inter;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 24px;
+          line-height: 28px;
+          text-align: center;
+        }
+
+        @media screen and (max-width: 1200px) {
+          .PartneredContainer p {
+            width: 220px;
+          }
+
+          .ImgFeature {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .ImgFeature > div {
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .ImgFeature > div > h1 {
+            text-align: center;
+            font-size: 28px;
+          }
+
+          .ImgFeature > div > p {
+            max-width: 350px;
+            font-size: 22px;
+            text-align: center;
+          }
+
+          .ImgFeature > img {
+            max-width: 300px;
+          }
+
+          .downloadInnerContainer > img {
+            display: none;
+          }
+
+          .downloadButtons {
+            margin: 0;
+          }
+
+          .downloadButtons h1 {
+            font-size: 25px;
+          }
+        }
+
+        .linuxVersions {
+          margin-top: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+        }
+
+        .linuxVersions div {
+          margin-top: 10px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+        }
+
+        .linuxVersions div {
+          margin-top: 10px;
+          width: 200px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+        }
+
+        .linuxVersionsButton{
+          width: 50px;
+          height 50px;
+        }
+
+        .linuxVersionsButton:nth-child(2) {
+          margin: 0 10px;
+        }
+
+        @media screen and (max-width: 600px) {
+          .PartneredContainer > h3 {
+            display: none;
+          }
+
+          .PartneredContainer > p {
+            width: 220px;
+          }
+
+          .supportButtons {
+            flex-direction: column;
+          }
+
+          .ImgFeature > div > p {
+            font-size: 22px;
+          }
+
+          .firstView {
+            margin-bottom: 200px;
+          }
+
+          .innerContainerText h1 {
+            font-size: 60px;
+          }
+
+          .innerContainerText p {
+            font-size: 40px;
+          }
+
+          .ImgFeature {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .ImgFeature > div {
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .ImgFeature > div > h1 {
+            text-align: center;
+            font-size: 28px;
+          }
+
+          .ImgFeature > div > p {
+            max-width: 350px;
+            font-size: 22px;
+            text-align: center;
+          }
+
+          .ImgFeature > img {
+            max-width: 300px;
+          }
+
+          .PartneredContainer > h3 {
+            color: ${theme.palette.text.primary};
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 16px;
+            line-height: 28px;
+            display: none;
+          }
+
+          .PartneredContainer > p {
+            width: 220px;
+          }
+
+          .downloadInnerContainer > img {
+            display: none;
+          }
+
+          .downloadButtons {
+            margin: 0;
+          }
+
+          .downloadButtons h1 {
+            font-size: 25px;
+          }
+
+          .patreonContainer p {
+            width: 350px;
+            font-size: 22px;
+          }
+
+          .patreonContainer > div > a > img {
+            width: 300px;
+          }
+
+          ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+            border-radius: 1px;
+          }
+
+          ::-webkit-scrollbar-thumb {
+            background-color: #909ea4;
+            border-radius: 3px;
+          }
+
+          ::-webkit-scrollbar-track {
+            background-color: #050818;
+            border-radius: 1px;
+          }
+
+          @media screen and (max-width: 414px) {
+            .ImgFeature > div {
+              margin: 0;
+              justify-content: center;
+              align-items: center;
+            }
+
+            .Features h1 {
+              font-size: 55px;
+            }
+
+            .ImgFeature > div > h1 {
+              text-align: center;
+              font-size: 16px;
+              width: 300px;
+            }
+
+            .ImgFeature > div > p {
+              max-width: 350px;
+              font-size: 20px;
+              width: 300px;
+              text-align: center;
+            }
+
+            .ImgFeature > img {
+              max-width: 250px;
+            }
+
+            .PartneredContainer > p {
+              width: 150px;
+              text-align: center;
+            }
+
+            .innerContainerText > h1 {
+              font-size: 40px;
+            }
+
+            .innerContainerText > p {
+              font-size: 40px;
+            }
+
+            .patreonContainer > div > h1 {
+              font-size: 30px;
+            }
+
+            .patreonContainer > div > p {
+              width: 300px;
+            }
+
+            .patreonContainer > div > a > img {
+              width: 200px;
+            }
+
+            .downloadButtons > h1 {
+              font-size: 20px;
+            }
+          }
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default Download;
